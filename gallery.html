@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Birla Open Minds Ballari</title>
+  <meta name="description" content="Explore our vibrant classroom life and playful outdoor activities at Birla Open Minds Ballari.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Premium Cinematic Scroll Animations */
+    .scroll-section {
+      opacity: 0;
+      transform: translateY(60px) scale(0.98);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .scroll-section.animate-in {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .scroll-text-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      filter: blur(6px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), filter 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .scroll-text-reveal.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(2deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    /* Gallery Hover Effects */
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(234, 88, 12, 0.1);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    .gallery-item img {
+      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-[#F7F5F2] min-h-screen flex flex-col">
+
+    <!-- Global Header Placeholder -->
+  <div id="header-placeholder"></div>
+  <script src="header.js"></script>
+
+
+  <main class="flex-grow pt-40 pb-20">
+    <div class="max-w-[1200px] mx-auto px-6 text-center pt-8 md:pt-12 pb-20 relative z-10">
+      
+      <div class="relative inline-block mb-4">
+        <!-- Left SVG Smiley -->
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -left-8 md:-left-28 top-8 md:top-16 w-12 md:w-16 animate-float hidden md:block">
+          <circle cx="18" cy="18" r="3.5" fill="#65B776"/>
+          <circle cx="42" cy="14" r="3.5" fill="#65B776"/>
+          <path d="M12 36 C 25 52, 45 42, 54 26" stroke="#65B776" stroke-width="4.5" stroke-linecap="round"/>
+        </svg>
+
+        <!-- Right SVG Doodle -->
+        <svg width="70" height="60" viewBox="0 0 70 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -right-4 md:-right-24 -top-2 w-14 md:w-[70px] animate-float hidden md:block" style="animation-delay: 1.5s;">
+          <path d="M10 30 Q 30 5, 55 15" stroke="#F58B54" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <path d="M42 45 L 52 22" stroke="#F58B54" stroke-width="3" stroke-linecap="round"/>
+          <path d="M58 50 L 64 35" stroke="#F58B54" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2.5 bg-white px-5 py-2.5 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-black/[0.03] mb-8 scroll-section">
+          <svg class="w-4 h-4 text-[#EA580C] mt-0.5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L14.7 8.5L21.8 9.5L16.7 14.5L17.9 21.6L12 18.5L6.1 21.6L7.3 14.5L2.2 9.5L9.3 8.5L12 2Z"/>
+          </svg>
+          <span class="text-[#EA580C] text-[11px] md:text-[12px] font-extrabold tracking-[0.15em] uppercase mt-0.5">OUR MOMENTS</span>
+        </div>
+        
+        <!-- Heading -->
+        <h1 class="text-[44px] md:text-[64px] lg:text-[76px] font-extrabold text-[#231F20] leading-[1.15] md:leading-[1.1] tracking-tight mb-6 scroll-text-reveal stagger-1">
+          Capturing the joy<br>of learning
+        </h1>
+      </div>
+
+      <!-- Subtext -->
+      <p class="text-[#6B7280] text-[16px] md:text-[18px] leading-relaxed max-w-[680px] mx-auto scroll-text-reveal stagger-2">
+        Explore our vibrant classroom life, playful outdoor activities, and the wonderful milestones our children achieve every day.
+      </p>
+    </div>
+
+    <!-- Gallery Placeholder -->
+    <div class="max-w-[1200px] mx-auto px-6 py-20 flex flex-col items-center justify-center scroll-section">
+      <div class="w-24 h-24 bg-[#EA580C]/5 rounded-full flex items-center justify-center mb-8 animate-float">
+        <svg class="w-10 h-10 text-[#EA580C]/40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+        </svg>
+      </div>
+      <h2 class="text-[32px] md:text-[40px] font-bold text-[#231F20] mb-4 tracking-tight text-center">No Gallery Available</h2>
+      <p class="text-[#6B7280] text-[16px] md:text-[18px] text-center max-w-[480px] leading-relaxed">
+        We are currently updating our gallery with the latest memories and milestones. Please check back soon!
+      </p>
+    </div>
+  </main>
+
+    <!-- Global Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+  <script src="footer.js"></script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = { threshold: 0.15 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      document.querySelectorAll('.scroll-section, .scroll-text-reveal').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>

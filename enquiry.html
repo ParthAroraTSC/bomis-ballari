@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Enquiry | Birla Open Minds Ballari</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #e25d2a;
+      --bg: #f7f5f2;
+      --text: #1a1a1a;
+    }
+    body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); }
+    
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0); }
+      50% { transform: translateY(-15px) rotate(2deg); }
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(226, 93, 42, 0.1);
+    }
+
+    .form-card {
+      background: white;
+      border-radius: 32px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.03);
+    }
+    
+    .input-field {
+      width: 100%;
+      background: #f8f8f8;
+      border: 2px solid transparent;
+      border-radius: 16px;
+      padding: 14px 20px;
+      transition: all 0.3s ease;
+      font-size: 15px;
+    }
+
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .scroll-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Global Header Placeholder -->
+  <div id="header-placeholder"></div>
+  <script src="header.js"></script>
+
+
+  <main class="flex-grow pt-40 pb-24 px-6 md:px-12 relative overflow-hidden">
+    <!-- Decorative Blobs -->
+    <div class="absolute top-20 right-[-100px] w-[500px] h-[500px] bg-[#e25d2a]/5 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] bg-[#231F20]/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      
+      <!-- Left Column: Content & Illustration -->
+      <div class="scroll-reveal active">
+        <div class="inline-flex items-center gap-2.5 bg-white px-5 py-2 rounded-full shadow-sm border border-black/[0.03] mb-8">
+          <span class="w-2 h-2 rounded-full bg-[#e25d2a]"></span>
+          <span class="text-[#231F20] font-semibold text-[13px] uppercase tracking-widest">Join Our Community</span>
+        </div>
+        <h1 class="text-[44px] md:text-[60px] font-extrabold text-[#1a1a1a] leading-[1.1] mb-6">
+          Start Your Child’s <br><span class="text-[#e25d2a]">Journey With Us</span>
+        </h1>
+        <p class="text-[#1a1a1a]/60 text-[18px] md:text-[20px] leading-relaxed mb-10 max-w-[540px]">
+          Fill out the enquiry form, and our dedicated admissions team will guide you through the process of giving your child the best foundation for excellence.
+        </p>
+        
+        <!-- Illustration -->
+        <div class="relative w-full max-w-md animate-float">
+          <img src="assets/illustrations/enquiry-student.png" alt="Happy Student" class="w-full h-auto drop-shadow-2xl">
+        </div>
+      </div>
+
+      <!-- Right Column: Enquiry Form -->
+      <div class="scroll-reveal active" style="transition-delay: 0.2s">
+        <div class="form-card p-8 md:p-12 border border-black/[0.03]">
+          <h2 class="text-2xl font-bold text-[#1a1a1a] mb-8">Admission Enquiry Form</h2>
+          
+          <form id="enquiryForm" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <!-- Parent Name -->
+              <div class="space-y-2">
+                <label class="text-[14px] font-bold text-[#1a1a1a]/70 ml-1">Parent's Full Name</label>
+                <input type="text" placeholder="John Doe" class="input-field" required>
+              </div>
+              <!-- Child Name -->
+              <div class="space-y-2">
+                <label class="text-[14px] font-bold text-[#1a1a1a]/70 ml-1">Child's Full Name</label>
+                <input type="text" placeholder="Jane Doe" class="input-field" required>
+              </div>
+              <!-- Child Age -->
+              <div class="space-y-2">
+                <label class="text-[14px] font-bold text-[#1a1a1a]/70 ml-1">Child's Age</label>
+                <select class="input-field cursor-pointer" required>
+                  <option value="" disabled selected>Select Age</option>
+                  <option>1.5 - 2 Years</option>
+                  <option>2 - 3 Years</option>
+                  <option>3 - 4 Years</option>
+                  <option>4 - 5 Years</option>
+                  <option>5 - 6 Years</option>
+                  <option>6 - 10 Years</option>
+                  <option>10+ Years</option>
+                </select>
+              </div>
+              <!-- Program Interest -->
+              <div class="space-y-2">
+                <label class="text-[14px] font-bold text-[#1a1a1a]/70 ml-1">Program Interest</label>
+                <select class="input-field cursor-pointer" required>
+                  <option value="" disabled selected>Select Program</option>
+                  <option>Pre-School</option>
+                  <option>Primary School</option>
+                  <option>Middle School</option>
+                </select>
+              </div>
+              <!-- Phone -->
+              <div class="space-y-2">
+                <label class="text-[14px] font-bold text-[#1a1a1a]/70 ml-1">Phone Number</label>
+                <input type="tel" placeholder="+91 00000 00000" class="input-field" required>
+              </div>
+              <!-- Email -->
+              <div class="space-y-2">
+                <label class="text-[14px] font-bold text-[#1a1a1a]/70 ml-1">Email Address</label>
+                <input type="email" placeholder="name@example.com" class="input-field" required>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="space-y-2">
+              <label class="text-[14px] font-bold text-[#1a1a1a]/70 ml-1">Message (Optional)</label>
+              <textarea rows="3" placeholder="How can we help you?" class="input-field resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-[#e25d2a] hover:bg-[#c94d22] text-white font-bold py-4 rounded-full shadow-lg shadow-[#e25d2a]/20 transition-all duration-300 transform hover:-translate-y-1 flex justify-center items-center gap-3 group">
+              <span>Submit Enquiry</span>
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </form>
+
+          <!-- Success Message -->
+          <div id="successMessage" class="hidden text-center py-8">
+            <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-[#1a1a1a] mb-2">Thank You!</h3>
+            <p class="text-[#1a1a1a]/50">Your enquiry has been received. We will contact you shortly.</p>
+            <button onclick="window.location.reload()" class="mt-6 text-[#e25d2a] font-bold hover:underline">Submit another enquiry</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 7. FOOTER SECTION -->
+    <!-- Global Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+  <script src="footer.js"></script>
+
+
+  <script>
+    document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button');
+      btn.disabled = true;
+      btn.innerHTML = 'Submitting...';
+      
+      setTimeout(() => {
+        this.classList.add('hidden');
+        document.getElementById('successMessage').classList.remove('hidden');
+      }, 1000);
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>

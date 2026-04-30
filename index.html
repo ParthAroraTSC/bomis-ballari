@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birla Open Minds International School - Ballari</title>
+  <meta name="description" content="Birla Open Minds International School (BOMIS) Ballari - Premium education from Pre-School to K-12 with world-class facilities.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #e25d2a;
+      --bg: #f7f5f2;
+      --text: #231F20;
+    }
+    body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); }
+    .scroll-reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .scroll-reveal.active { opacity: 1; transform: translateY(0); }
+    .no-js .scroll-reveal { opacity: 1 !important; transform: none !important; }
+    .blob-shape { position: absolute; z-index: 0; filter: blur(80px); opacity: 0.1; pointer-events: none; }
+    .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+    .btn-primary { background: var(--primary); color: white; padding: 14px 32px; border-radius: 99px; font-weight: 700; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-primary:hover { background: #D94E05; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(226, 93, 42, 0.2); }
+    .btn-secondary { background: white; color: var(--text); padding: 14px 32px; border-radius: 99px; font-weight: 700; border: 1px solid rgba(0,0,0,0.1); transition: all 0.3s ease; }
+    .btn-secondary:hover { background: #f0f0f0; border-color: rgba(0,0,0,0.2); }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #bbb; }
+  </style>
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body class="overflow-x-hidden">
+
+  <!-- Background Blobs -->
+  <div class="blob-shape w-[600px] h-[600px] bg-[#EA580C] top-[-100px] right-[-100px] rounded-full"></div>
+  <div class="blob-shape w-[500px] h-[500px] bg-[#231F20] bottom-[200px] left-[-200px] rounded-full"></div>
+
+    <!-- Global Header Placeholder -->
+  <div id="header-placeholder"></div>
+  <script src="header.js"></script>
+
+
+  <!-- 1. HERO SECTION -->
+  <section class="relative min-h-screen flex items-center pt-[120px] pb-20 px-4 md:px-8 overflow-hidden">
+    <div class="max-w-[1240px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="scroll-reveal active">
+        <div class="inline-flex items-center gap-2.5 bg-white px-5 py-2 rounded-full shadow-sm border border-black/[0.03] mb-8">
+          <span class="w-2 h-2 rounded-full bg-[#e25d2a]"></span>
+          <span class="text-[#231F20] font-semibold text-[14px] uppercase tracking-widest">Nurturing Excellence</span>
+        </div>
+        <h1 class="text-[48px] md:text-[68px] font-extrabold text-[#1a1a1a] leading-[1.1] mb-8">
+          Welcome to <span class="text-[#e25d2a]">BOMIS</span> Ballari
+        </h1>
+        <p class="text-[#666] text-[18px] md:text-[20px] leading-relaxed mb-10 max-w-[580px]">
+          Birla Open Minds International School offers comprehensive educational solutions from formative early years to K-12 schooling, guided by the excellence of Birla Edutech.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="contact.html" class="btn-primary">
+            Enroll Now
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+          <a href="programs.html" class="btn-secondary">Explore Programs</a>
+        </div>
+      </div>
+      <div class="relative scroll-reveal active">
+        <!-- Floating Doodles -->
+        <img src="assets/home/pencil.png" class="absolute -top-12 -left-12 w-24 h-auto animate-bounce opacity-80 z-20" alt="Doodle">
+        
+        <div class="relative aspect-[5/4] rounded-[40px] overflow-hidden shadow-2xl z-10">
+          <img src="assets/hero_full_kids.png" alt="Happy Kids" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. TRUST / HIGHLIGHTS SECTION -->
+  <section class="py-20 px-4 md:px-8 bg-white relative z-10">
+    <div class="max-w-[1240px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Ages Covered -->
+      <div class="scroll-reveal bg-[#f7f5f2] p-8 rounded-[32px] hover-lift text-center">
+        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-[#e25d2a] mx-auto mb-6 shadow-sm">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+        </div>
+        <h4 class="text-[18px] font-bold mb-2">Ages Covered</h4>
+        <p class="text-[14px] text-[#666]">18 Months to 14 Years comprehensive education.</p>
+      </div>
+      <!-- Certified Educators -->
+      <div class="scroll-reveal bg-[#f7f5f2] p-8 rounded-[32px] hover-lift text-center" style="transition-delay: 0.1s">
+        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-[#e25d2a] mx-auto mb-6 shadow-sm">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+        </div>
+        <h4 class="text-[18px] font-bold mb-2">Certified Educators</h4>
+        <p class="text-[14px] text-[#666]">Experienced & passionate about child growth.</p>
+      </div>
+      <!-- Safe Campus -->
+      <div class="scroll-reveal bg-[#f7f5f2] p-8 rounded-[32px] hover-lift text-center" style="transition-delay: 0.2s">
+        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-[#e25d2a] mx-auto mb-6 shadow-sm">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h4 class="text-[18px] font-bold mb-2">Safe Campus</h4>
+        <p class="text-[14px] text-[#666]">24/7 CCTV surveillance & safety maintenance.</p>
+      </div>
+      <!-- Parent Updates -->
+      <div class="scroll-reveal bg-[#f7f5f2] p-8 rounded-[32px] hover-lift text-center" style="transition-delay: 0.3s">
+        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-[#e25d2a] mx-auto mb-6 shadow-sm">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+        </div>
+        <h4 class="text-[18px] font-bold mb-2">Parent Updates</h4>
+        <p class="text-[14px] text-[#666]">Regular communication & documented progress.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. ABOUT / INTRO SECTION -->
+  <section class="py-24 px-4 md:px-8 relative overflow-hidden">
+    <div class="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div class="relative scroll-reveal">
+        <div class="aspect-square rounded-[48px] overflow-hidden shadow-2xl">
+          <img src="assets/home/campus.jpg" alt="Campus Life" class="w-full h-full object-cover">
+        </div>
+        <!-- Shape -->
+        <img src="assets/home/Shape-dot.png" class="absolute -bottom-10 -left-10 w-40 h-auto -z-10" alt="Shape">
+      </div>
+      <div class="scroll-reveal">
+        <h2 class="text-[36px] md:text-[48px] font-extrabold text-[#1a1a1a] leading-tight mb-8">
+          The Right Foundation for <span class="text-[#e25d2a]">Lifelong Learning</span>
+        </h2>
+        <div class="space-y-6 text-[#666] text-[17px] leading-relaxed mb-10">
+          <p>
+            At Birla Open Minds Ballari, we believe that education should fit the necessities, interests, and capabilities of each child. Our BOMISites are at the center of every educational process and system we design.
+          </p>
+          <p>
+            Our curriculum, by each of its parameters, focuses on boosting the social, emotional, spiritual, physical, motor, and cognitive development of each child, ensuring a holistic start to their academic journey.
+          </p>
+        </div>
+        <a href="about.html" class="btn-primary">Learn More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PROGRAMS PREVIEW SECTION -->
+  <section class="py-24 px-4 md:px-8 bg-white">
+    <div class="max-w-[1240px] mx-auto">
+      <div class="text-center mb-16 scroll-reveal">
+        <h2 class="text-[36px] md:text-[48px] font-extrabold text-[#1a1a1a] mb-4">Our Programs</h2>
+        <p class="text-[#666] text-[18px]">Tailored learning journeys for every stage of development.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Pre-School -->
+        <div class="scroll-reveal bg-[#f7f5f2] rounded-[32px] overflow-hidden hover-lift flex flex-col">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/programs/preschool3.jpg" alt="Pre-School" class="w-full h-full object-cover">
+          </div>
+          <div class="p-8 flex-grow">
+            <h3 class="text-[24px] font-bold mb-3">Pre-School</h3>
+            <p class="text-[#666] text-[15px] mb-6">18 Months - 5 Years. Celebrating formative years with a strong and sure start.</p>
+            <a href="programs/pre-school.html" class="text-[#e25d2a] font-bold flex items-center gap-2 group">
+              View Programs 
+              <svg class="w-5 h-5 transition-transform group-hover:translate-x-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+        <!-- Primary -->
+        <div class="scroll-reveal bg-[#f7f5f2] rounded-[32px] overflow-hidden hover-lift flex flex-col" style="transition-delay: 0.1s">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/programs/primary1.jpg" alt="Primary School" class="w-full h-full object-cover">
+          </div>
+          <div class="p-8 flex-grow">
+            <h3 class="text-[24px] font-bold mb-3">Primary School</h3>
+            <p class="text-[#666] text-[15px] mb-6">6 Years - 10 Years. Building strong academic and social foundations.</p>
+            <a href="programs/primary-school.html" class="text-[#e25d2a] font-bold flex items-center gap-2 group">
+              View Programs 
+              <svg class="w-5 h-5 transition-transform group-hover:translate-x-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+        <!-- Middle -->
+        <div class="scroll-reveal bg-[#f7f5f2] rounded-[32px] overflow-hidden hover-lift flex flex-col" style="transition-delay: 0.2s">
+          <div class="aspect-square overflow-hidden bg-white p-10 flex items-center justify-center">
+            <img src="assets/programs/primary-curriculum.png" alt="Middle School Curriculum" class="w-full h-full object-contain">
+          </div>
+          <div class="p-8 flex-grow">
+            <h3 class="text-[24px] font-bold mb-3">Middle School</h3>
+            <p class="text-[#666] text-[15px] mb-6">10 Years - 14 Years. Holistic and dynamic approach to secondary education.</p>
+            <a href="programs/middle-school.html" class="text-[#e25d2a] font-bold flex items-center gap-2 group">
+              View Programs 
+              <svg class="w-5 h-5 transition-transform group-hover:translate-x-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. WHY CHOOSE US SECTION -->
+  <section class="py-24 px-4 md:px-8 bg-[#f7f5f2]">
+    <div class="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div class="scroll-reveal">
+        <h2 class="text-[36px] md:text-[48px] font-extrabold text-[#1a1a1a] leading-tight mb-12">
+          World-Class <span class="text-[#e25d2a]">Facilities</span> for Modern Learners
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-[#e25d2a]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-bold mb-1">Smart Classrooms</h4>
+              <p class="text-[14px] text-[#666]">Creative and dynamic learning environments.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-[#e25d2a]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-bold mb-1">Specialized Sports</h4>
+              <p class="text-[14px] text-[#666]">Training for local and national participation.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-[#e25d2a]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-bold mb-1">AC Transport</h4>
+              <p class="text-[14px] text-[#666]">Safe commute with individual seats.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-[#e25d2a]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-bold mb-1">Music & Dance</h4>
+              <p class="text-[14px] text-[#666]">Classical and Western form training.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative scroll-reveal">
+        <div class="rounded-[40px] overflow-hidden shadow-2xl">
+          <img src="assets/home/school-building.jpg" alt="School Facilities" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. GALLERY / EXPERIENCE SECTION -->
+  <section class="py-24 bg-white overflow-hidden">
+    <div class="max-w-[1240px] mx-auto px-4 md:px-8 mb-12 scroll-reveal text-center">
+      <h2 class="text-[36px] md:text-[48px] font-extrabold text-[#1a1a1a] mb-4">Our Experience</h2>
+      <p class="text-[#666] text-[18px]">Capturing the moments that define our students' journey.</p>
+    </div>
+    <div class="flex gap-4 overflow-x-auto pb-12 px-4 md:px-8 no-scrollbar scroll-reveal" style="scrollbar-width: none;">
+      <div class="shrink-0 w-[300px] h-[400px] rounded-[24px] overflow-hidden hover-lift">
+        <img src="assets/home/g1.png" class="w-full h-full object-cover" alt="Gallery">
+      </div>
+      <div class="shrink-0 w-[300px] h-[400px] rounded-[24px] overflow-hidden hover-lift">
+        <img src="assets/home/g2.png" class="w-full h-full object-cover" alt="Gallery">
+      </div>
+      <div class="shrink-0 w-[300px] h-[400px] rounded-[24px] overflow-hidden hover-lift">
+        <img src="assets/home/g3.png" class="w-full h-full object-cover" alt="Gallery">
+      </div>
+      <div class="shrink-0 w-[300px] h-[400px] rounded-[24px] overflow-hidden hover-lift">
+        <img src="assets/home/g4.png" class="w-full h-full object-cover" alt="Gallery">
+      </div>
+      <div class="shrink-0 w-[300px] h-[400px] rounded-[24px] overflow-hidden hover-lift">
+        <img src="assets/home/g5.png" class="w-full h-full object-cover" alt="Gallery">
+      </div>
+      <div class="shrink-0 w-[300px] h-[400px] rounded-[24px] overflow-hidden hover-lift">
+        <img src="assets/home/g6.png" class="w-full h-full object-cover" alt="Gallery">
+      </div>
+      <div class="shrink-0 w-[300px] h-[400px] rounded-[24px] overflow-hidden hover-lift">
+        <img src="assets/home/g7.png" class="w-full h-full object-cover" alt="Gallery">
+      </div>
+      <div class="shrink-0 w-[300px] h-[400px] rounded-[24px] overflow-hidden hover-lift">
+        <img src="assets/home/g8.png" class="w-full h-full object-cover" alt="Gallery">
+      </div>
+      <div class="shrink-0 w-[300px] h-[400px] rounded-[24px] overflow-hidden hover-lift">
+        <img src="assets/home/g9.png" class="w-full h-full object-cover" alt="Gallery">
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. BLOG / INSIGHTS SECTION -->
+  <section class="py-24 px-4 md:px-8 bg-[#f7f5f2]">
+    <div class="max-w-[1240px] mx-auto">
+      <div class="flex justify-between items-end mb-16 scroll-reveal">
+        <div>
+          <h2 class="text-[36px] md:text-[48px] font-extrabold text-[#1a1a1a] mb-4">Latest Insights</h2>
+          <p class="text-[#666] text-[18px]">Expert advice for modern parenting and education.</p>
+        </div>
+        <a href="blog.html" class="hidden md:flex items-center gap-2 text-[#e25d2a] font-bold text-[18px]">View All Blogs →</a>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Blog 1 -->
+        <div class="scroll-reveal bg-white rounded-[32px] overflow-hidden hover-lift group">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img src="assets/blogs/cover_1774435704_c429935d.jpg" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-8">
+            <div class="flex gap-2 mb-4">
+              <span class="px-3 py-1 bg-[#e25d2a]/10 text-[#e25d2a] text-[12px] font-bold rounded-full">Admissions</span>
+            </div>
+            <h3 class="text-[20px] font-bold mb-4 line-clamp-2">Pre-School Admission in Ballari 2025–26: What Every Parent Must Know</h3>
+            <a href="blogs/pre-school-admission-2025.html" class="text-[#e25d2a] font-bold inline-flex items-center gap-2 group/btn">
+              Read More 
+              <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+        <!-- Blog 2 -->
+        <div class="scroll-reveal bg-white rounded-[32px] overflow-hidden hover-lift group" style="transition-delay: 0.1s">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img src="assets/blogs/cover_1774434998_eff04923.jpg" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-8">
+            <div class="flex gap-2 mb-4">
+              <span class="px-3 py-1 bg-[#e25d2a]/10 text-[#e25d2a] text-[12px] font-bold rounded-full">Parenting</span>
+            </div>
+            <h3 class="text-[20px] font-bold mb-4 line-clamp-2">Why Early Childhood Education is the Best Gift You Can Give Your Child</h3>
+            <a href="blog.html" class="text-[#e25d2a] font-bold inline-flex items-center gap-2 group/btn">
+              Read More 
+              <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+        <!-- Blog 3 -->
+        <div class="scroll-reveal bg-white rounded-[32px] overflow-hidden hover-lift group" style="transition-delay: 0.2s">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img src="assets/blogs/cover_1774435436_ce9769fe.jpg" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-8">
+            <div class="flex gap-2 mb-4">
+              <span class="px-3 py-1 bg-[#e25d2a]/10 text-[#e25d2a] text-[12px] font-bold rounded-full">Development</span>
+            </div>
+            <h3 class="text-[20px] font-bold mb-4 line-clamp-2">Nurturing Creativity: How to Encourage Your Child's Artistic Side</h3>
+            <a href="blog.html" class="text-[#e25d2a] font-bold inline-flex items-center gap-2 group/btn">
+              Read More 
+              <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Premium Footer (Same as index/about) -->
+  <!-- Global Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+  <script src="footer.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>

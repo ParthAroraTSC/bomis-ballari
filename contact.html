@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Birla Open Minds Ballari</title>
+  <meta name="description" content="Get in touch with Birla Open Minds Ballari. We're here to answer your questions and welcome you to our family.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Premium Cinematic Scroll Animations */
+    .scroll-section {
+      opacity: 0;
+      transform: translateY(60px) scale(0.98);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .scroll-section.animate-in {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .scroll-text-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      filter: blur(6px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), filter 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .scroll-text-reveal.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(1deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes floatSlow {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(2deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    .animate-float-slow {
+      animation: floatSlow 8s ease-in-out infinite;
+    }
+
+    @keyframes fadeScale {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .animate-fade-scale {
+      animation: fadeScale 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+  </style>
+</head>
+<body class="bg-[#F7F5F2] min-h-screen flex flex-col">
+
+  <!-- Header / Navigation -->
+    <!-- Global Header Placeholder -->
+  <div id="header-placeholder"></div>
+  <script src="header.js"></script>
+
+
+  <main class="flex-grow pt-32 pb-20 bg-[#f5f3ef]">
+    <div class="max-w-[1200px] mx-auto px-6 py-16 md:py-24 relative z-10 text-center">
+      
+      <!-- Content Container -->
+      <div class="relative inline-block w-full max-w-[900px]">
+        
+        <!-- BADGE -->
+        <div class="inline-flex items-center gap-2.5 bg-white px-5 py-2.5 rounded-full border border-[#EA580C]/30 shadow-[0_4px_15px_rgba(234,88,12,0.08)] mb-6 scroll-section opacity-0 scale-95 animate-fade-scale">
+          <!-- Small Orange Star/Flower Icon -->
+          <svg class="w-4 h-4 text-[#EA580C]" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L14.7 8.5L21.8 9.5L16.7 14.5L17.9 21.6L12 18.5L6.1 21.6L7.3 14.5L2.2 9.5L9.3 8.5L12 2Z"/>
+          </svg>
+          <span class="text-[#EA580C] text-[12px] font-extrabold tracking-[0.15em] uppercase">GET IN TOUCH</span>
+        </div>
+
+        <!-- MAIN HEADING AREA -->
+        <div class="relative mt-2">
+          <!-- LEFT: Green smile doodle -->
+          <svg width="84" height="64" viewBox="0 0 100 70" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -left-12 md:-left-36 top-0 w-16 md:w-28 animate-float-slow">
+            <path d="M25 45 Q 50 65, 75 45" stroke="#65B776" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="42" cy="30" r="4.5" fill="#65B776"/>
+            <circle cx="62" cy="26" r="4.5" fill="#65B776"/>
+          </svg>
+
+          <!-- RIGHT: Orange curved lines -->
+          <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -right-8 md:-right-28 -top-8 w-16 md:w-28 animate-float-slow" style="animation-delay: 2s;">
+            <path d="M20 50 C 30 30, 50 35, 60 50" stroke="#EA580C" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+            <path d="M60 40 L 75 25" stroke="#EA580C" stroke-width="4" stroke-linecap="round"/>
+            <path d="M70 55 L 88 55" stroke="#EA580C" stroke-width="4" stroke-linecap="round"/>
+            <path d="M65 70 L 78 88" stroke="#EA580C" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+
+          <h1 class="text-[48px] md:text-[68px] lg:text-[82px] font-extrabold text-[#111] leading-[1.05] tracking-tight mb-8 scroll-text-reveal">
+            Get in touch & ecnroll<br>your child today
+          </h1>
+        </div>
+
+        <!-- SUBTEXT -->
+        <p class="text-[#777] text-[16px] md:text-[18px] leading-[1.6] max-w-[620px] mx-auto scroll-text-reveal stagger-1">
+          We're here to answer questions, schedule tours, discuss enrollment, or simply chat about how we can support your child's unique growth and development.
+        </p>
+      </div>
+
+    </div>
+
+      <!-- Contact Form Section -->
+      <div class="max-w-[900px] mx-auto scroll-section">
+        <div class="bg-white rounded-[24px] p-10 md:p-12 shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-black/[0.01]">
+          
+          <h2 class="text-[#111] font-bold text-[32px] mb-8 text-left">Secure a spot now</h2>
+          
+          <form class="flex flex-col gap-6 text-left">
+            <!-- Row 1: First Name | Last Name -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="flex flex-col gap-2">
+                <label class="text-[13px] font-semibold text-[#555] ml-1">First Name *</label>
+                <input type="text" placeholder="John" class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all placeholder:text-[#888]">
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-[13px] font-semibold text-[#555] ml-1">Last Name *</label>
+                <input type="text" placeholder="Smith" class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all placeholder:text-[#888]">
+              </div>
+            </div>
+
+            <!-- Row 2: Email | Phone -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="flex flex-col gap-2">
+                <label class="text-[13px] font-semibold text-[#555] ml-1">Email Address *</label>
+                <input type="email" placeholder="john@example.com" class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all placeholder:text-[#888]">
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-[13px] font-semibold text-[#555] ml-1">Phone Number *</label>
+                <input type="tel" placeholder="(415) 555-1234" class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all placeholder:text-[#888]">
+              </div>
+            </div>
+
+            <!-- Row 3: Child's Age | Program -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="flex flex-col gap-2">
+                <label class="text-[13px] font-semibold text-[#555] ml-1">Child's Age</label>
+                <select class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all text-[#888] appearance-none cursor-pointer">
+                  <option selected disabled>Select age</option>
+                  <option>1-2 Years</option>
+                  <option>2-3 Years</option>
+                  <option>3-5 Years</option>
+                  <option>5+ Years</option>
+                </select>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-[13px] font-semibold text-[#555] ml-1">Program of Interest</label>
+                <select class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all text-[#888] appearance-none cursor-pointer">
+                  <option selected disabled>Select program</option>
+                  <option>Toddler Program</option>
+                  <option>Preschool</option>
+                  <option>Kindergarten</option>
+                  <option>After School</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Row 4: Desired Start Date -->
+            <div class="flex flex-col gap-2">
+              <label class="text-[13px] font-semibold text-[#555] ml-1">Desired Start Date</label>
+              <input type="text" placeholder="e.g., September 2026, ASAP, Flexible" class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all placeholder:text-[#888]">
+            </div>
+
+            <!-- Row 5: Message -->
+            <div class="flex flex-col gap-2">
+              <label class="text-[13px] font-semibold text-[#555] ml-1">Message</label>
+              <textarea placeholder="Tell us a bit about your child and what you're looking for..." rows="5" class="bg-[#f1efec] rounded-[12px] px-5 py-4 border-none focus:ring-2 focus:ring-[#e25d2a]/20 outline-none text-[15px] transition-all placeholder:text-[#888] resize-none"></textarea>
+            </div>
+
+            <!-- Button -->
+            <button class="w-full bg-[#e25d2a] hover:bg-[#d14d1f] text-white font-bold text-[16px] h-[55px] rounded-full transition-all duration-300 flex items-center justify-center gap-3 shadow-lg shadow-[#e25d2a]/10 hover:scale-[1.01] transform active:scale-[0.99]">
+              <span>Send Message</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
+            </button>
+
+            <!-- Footer Text -->
+            <p class="text-center text-[#888] text-[12px] mt-2">
+              By submitting this form, you agree to our privacy policy and consent to be contacted by Birla Open Minds Ballari.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Premium Footer -->
+    <!-- Global Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+  <script src="footer.js"></script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.scroll-section, .scroll-text-reveal').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>

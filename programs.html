@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Programs - Birla Open Minds Ballari</title>
+  <meta name="description" content="Explore our tailored early education programs for children aged 1–6 at Birla Open Minds Ballari.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+    
+    .scroll-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Fallback for users with JS disabled or if script fails */
+    .no-js .scroll-reveal {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    .blob-shape {
+      position: absolute;
+      z-index: 0;
+      filter: blur(80px);
+      opacity: 0.12;
+      pointer-events: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(2deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+  </style>
+  <script>
+    document.documentElement.classList.remove('no-js');
+  </script>
+</head>
+<body class="bg-[#f7f5f2] min-h-screen flex flex-col overflow-x-hidden">
+
+  <!-- Abstract Background Shapes -->
+  <div class="blob-shape w-[500px] h-[500px] bg-[#EA580C] top-[-100px] right-[-100px] rounded-full"></div>
+  <div class="blob-shape w-[600px] h-[600px] bg-[#231F20] bottom-[200px] left-[-200px] rounded-full"></div>
+
+    <!-- Global Header Placeholder -->
+  <div id="header-placeholder"></div>
+  <script src="header.js"></script>
+
+
+  <main class="flex-grow pt-[140px] md:pt-[180px] pb-20 px-4 md:px-8 relative z-10">
+    <div class="max-w-[1240px] mx-auto">
+      
+      <!-- Hero Title -->
+      <div class="text-center mb-16 md:mb-24 relative">
+        <!-- Left SVG Smiley -->
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -left-8 md:-left-20 top-8 md:top-16 w-12 md:w-16 animate-float hidden lg:block">
+          <circle cx="18" cy="18" r="3.5" fill="#65B776"/>
+          <circle cx="42" cy="14" r="3.5" fill="#65B776"/>
+          <path d="M12 36 C 25 52, 45 42, 54 26" stroke="#65B776" stroke-width="4.5" stroke-linecap="round"/>
+        </svg>
+
+        <!-- Right SVG Doodle -->
+        <svg width="70" height="60" viewBox="0 0 70 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -right-4 md:-right-20 -top-2 w-14 md:w-[70px] animate-float hidden lg:block" style="animation-delay: 1.5s;">
+          <path d="M10 30 Q 30 5, 55 15" stroke="#F58B54" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <path d="M42 45 L 52 22" stroke="#F58B54" stroke-width="3" stroke-linecap="round"/>
+          <path d="M58 50 L 64 35" stroke="#F58B54" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+
+        <div class="inline-flex items-center gap-2.5 bg-white px-5 py-2 rounded-full shadow-sm border border-black/[0.03] mb-6">
+          <span class="w-2 h-2 rounded-full bg-[#EA580C]"></span>
+          <span class="text-[#231F20] font-semibold text-[14px] uppercase tracking-widest">Our Curriculum</span>
+        </div>
+        <h1 class="text-[42px] md:text-[64px] font-extrabold text-[#1a1a1a] leading-tight tracking-tight mb-6">
+          Programs that nurture<br>Joyful growth
+        </h1>
+        <p class="text-[#666] text-[17px] md:text-[19px] leading-relaxed max-w-[720px] mx-auto">
+          Our age-appropriate programs at Birla Open Minds Ballari blend play, creativity, and structure to help children develop confidence, curiosity, and essential skills at their own natural pace.
+        </p>
+      </div>
+
+      <!-- Programs Stacked Layout -->
+      <div class="flex flex-col gap-[50px] md:gap-[60px]">
+        
+        <!-- Card 1: Pre-School (Text LEFT, Image RIGHT) -->
+        <div class="scroll-reveal bg-white rounded-[24px] shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col md:flex-row items-center transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] group">
+          <div class="flex-1 p-10 md:p-[60px]">
+            <span class="text-[#e25d2a] font-bold text-[13px] uppercase tracking-[0.2em] mb-4 block">AGES: 1.5–5 (PRE-NURSERY TO KG 2)</span>
+            <h3 class="text-[34px] md:text-[40px] font-bold text-[#1a1a1a] mb-5 leading-tight">Pre-School Programme</h3>
+            <p class="text-[#666] text-[17px] md:text-[18px] leading-relaxed mb-8">
+              Celebrating the importance of formative years with a curriculum based on neuroscientific research. Our theme-based approach investigator ideas through dynamic learning environments and resource-equipped centres.
+            </p>
+            <div class="mb-10">
+              <span class="font-bold text-[#1a1a1a] text-[15px] block mb-4">Highlights:</span>
+              <div class="flex flex-wrap gap-2.5">
+                <span class="bg-[#f2f2f2] text-[#666] px-5 py-2 rounded-full text-[13px] font-medium transition-colors hover:bg-[#EA580C]/10 hover:text-[#EA580C]">Mascot Gee Tee</span>
+                <span class="bg-[#f2f2f2] text-[#666] px-5 py-2 rounded-full text-[13px] font-medium transition-colors hover:bg-[#EA580C]/10 hover:text-[#EA580C]">Happy Learning Spaces</span>
+                <span class="bg-[#f2f2f2] text-[#666] px-5 py-2 rounded-full text-[13px] font-medium transition-colors hover:bg-[#EA580C]/10 hover:text-[#EA580C]">Outdoor Mysteries</span>
+                <span class="bg-[#f2f2f2] text-[#666] px-5 py-2 rounded-full text-[13px] font-medium transition-colors hover:bg-[#EA580C]/10 hover:text-[#EA580C]">Individual Care</span>
+              </div>
+            </div>
+            <a href="programs/pre-school.html" class="inline-flex items-center gap-3 bg-[#e25d2a] hover:bg-[#D94E05] text-white font-bold text-[16px] px-9 py-4.5 rounded-full transition-all duration-300 shadow-md hover:-translate-y-1.5 hover:shadow-lg active:scale-95 group/btn">
+              View Programs 
+              <svg class="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+          <div class="w-full md:w-1/2 p-6 md:p-10 bg-[#fafafa]">
+            <div class="relative aspect-[4/3] rounded-[20px] overflow-hidden shadow-sm">
+              <img src="assets/programs/preschool3.jpg" alt="Pre-School" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-40"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Primary School (Image LEFT, Text RIGHT) -->
+        <div class="scroll-reveal bg-white rounded-[24px] shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col md:flex-row-reverse items-center transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] group">
+          <div class="flex-1 p-10 md:p-[60px]">
+            <span class="text-[#e25d2a] font-bold text-[13px] uppercase tracking-[0.2em] mb-4 block">AGES: 6–10 (GRADES 1–4)</span>
+            <h3 class="text-[34px] md:text-[40px] font-bold text-[#1a1a1a] mb-5 leading-tight">Primary School</h3>
+            <p class="text-[#666] text-[17px] md:text-[18px] leading-relaxed mb-8">
+              A holistic curriculum designed to nurture children in all dimensions—social, emotional, spiritual, and cognitive. We emphasize individual uniqueness to help students become lifelong learners.
+            </p>
+            <div class="mb-10">
+              <span class="font-bold text-[#1a1a1a] text-[15px] block mb-4">Highlights:</span>
+              <div class="flex flex-wrap gap-2.5">
+                <span class="bg-[#f2f2f2] text-[#666] px-5 py-2 rounded-full text-[13px] font-medium transition-colors hover:bg-[#EA580C]/10 hover:text-[#EA580C]">Thematic Integration</span>
+                <span class="bg-[#f2f2f2] text-[#666] px-5 py-2 rounded-full text-[13px] font-medium transition-colors hover:bg-[#EA580C]/10 hover:text-[#EA580C]">Soul Science</span>
+                <span class="bg-[#f2f2f2] text-[#666] px-5 py-2 rounded-full text-[13px] font-medium transition-colors hover:bg-[#EA580C]/10 hover:text-[#EA580C]">Divergent Thinking</span>
+                <span class="bg-[#f2f2f2] text-[#666] px-5 py-2 rounded-full text-[13px] font-medium transition-colors hover:bg-[#EA580C]/10 hover:text-[#EA580C]">SPEED Sports</span>
+              </div>
+            </div>
+            <a href="programs/primary-school.html" class="inline-flex items-center gap-3 bg-[#e25d2a] hover:bg-[#D94E05] text-white font-bold text-[16px] px-9 py-4.5 rounded-full transition-all duration-300 shadow-md hover:-translate-y-1.5 hover:shadow-lg active:scale-95 group/btn">
+              View Programs 
+              <svg class="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+          <div class="w-full md:w-1/2 p-6 md:p-10 bg-[#fafafa]">
+            <div class="relative aspect-[4/3] rounded-[20px] overflow-hidden shadow-sm bg-white">
+              <img src="assets/programs/primary1.jpg" alt="Primary School" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-40"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Middle School (Text LEFT, Image RIGHT) -->
+        <div class="scroll-reveal bg-white rounded-[24px] shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col md:flex-row items-center transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] group">
+          <div class="flex-1 p-10 md:p-[60px]">
+            <span class="text-[#e25d2a] font-bold text-[13px] uppercase tracking-[0.2em] mb-4 block">AGES: 11–14 (CLASSES 6–8)</span>
+            <h3 class="text-[34px] md:text-[40px] font-bold text-[#1a1a1a] mb-5 leading-tight">Middle School</h3>
+            <p class="text-[#666] text-[17px] md:text-[18px] leading-relaxed mb-8">
+              Seamlessly amalgamating major board curricula with a focus on student-centric learning. Our methodology moves from concrete to abstract, fostering independent analysis.
+            </p>
+            <div class="mb-10">
+              <span class="font-bold text-[#1a1a1a] text-[15px] block mb-4">Highlights:</span>
+              <div class="flex flex-wrap gap-2.5">
+                <span class="bg-[#f2f2f2] text-[#666] px-5 py-2 rounded-full text-[13px] font-medium transition-colors hover:bg-[#EA580C]/10 hover:text-[#EA580C]">Constructive Methodology</span>
+                <span class="bg-[#f2f2f2] text-[#666] px-5 py-2 rounded-full text-[13px] font-medium transition-colors hover:bg-[#EA580C]/10 hover:text-[#EA580C]">Life Skills</span>
+                <span class="bg-[#f2f2f2] text-[#666] px-5 py-2 rounded-full text-[13px] font-medium transition-colors hover:bg-[#EA580C]/10 hover:text-[#EA580C]">Competency-Based</span>
+                <span class="bg-[#f2f2f2] text-[#666] px-5 py-2 rounded-full text-[13px] font-medium transition-colors hover:bg-[#EA580C]/10 hover:text-[#EA580C]">Community Service</span>
+              </div>
+            </div>
+            <a href="programs/middle-school.html" class="inline-flex items-center gap-3 bg-[#e25d2a] hover:bg-[#D94E05] text-white font-bold text-[16px] px-9 py-4.5 rounded-full transition-all duration-300 shadow-md hover:-translate-y-1.5 hover:shadow-lg active:scale-95 group/btn">
+              View Programs 
+              <svg class="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+          <div class="w-full md:w-1/2 p-6 md:p-10 bg-white">
+            <div class="relative aspect-square rounded-[20px] overflow-hidden shadow-sm bg-white flex items-center justify-center p-10">
+              <img src="assets/programs/primary-curriculum.png" alt="Middle School Curriculum" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+    <!-- Global Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+  <script src="footer.js"></script>
+
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>
