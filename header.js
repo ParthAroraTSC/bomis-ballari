@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isPrograms = path.includes('programs.html') || path.includes('/programs/');
     const isGallery = path.includes('gallery.html');
     const isBlogs = path.includes('blog.html') || path.includes('/blogs/');
+    const isEnquiry = path.includes('enquiry.html');
 
     const headerHTML = `
     <!-- Top Portal Bar -->
@@ -29,32 +30,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <!-- Main Navigation Header -->
     <header class="w-full flex justify-center pt-6 px-4 md:px-6 absolute lg:top-0 top-10 left-0 z-50 pointer-events-none">
-        <nav class="w-full max-w-[1240px] bg-white/90 backdrop-blur-md rounded-full px-6 md:px-8 py-3 flex items-center justify-between shadow-md border border-black/5 pointer-events-auto">
+        <nav class="w-full max-w-[1240px] bg-white/95 backdrop-blur-md rounded-full px-6 md:px-8 py-3 flex items-center justify-between shadow-md border border-black/5 pointer-events-auto">
             <!-- Logo -->
             <a href="${base}index.html" class="flex items-center cursor-pointer shrink-0">
                 <img src="${base}logo/birla-logo-new.png" alt="BOMIS Ballari" class="h-10 md:h-14 w-auto">
             </a>
 
             <!-- Links (Desktop) -->
-            <div class="hidden lg:flex items-center gap-8 mx-4">
+            <div class="hidden lg:flex items-center gap-7 mx-4">
                 <a href="${base}index.html" class="${isHome ? 'text-[#EA580C] font-semibold' : 'text-[#231F20]/70 hover:text-[#EA580C] font-medium'} text-[14px] transition-colors duration-200">Home</a>
                 <a href="${base}about.html" class="${isAbout ? 'text-[#EA580C] font-semibold' : 'text-[#231F20]/70 hover:text-[#EA580C] font-medium'} text-[14px] transition-colors duration-200">About Us</a>
                 <a href="${base}programs.html" class="${isPrograms ? 'text-[#EA580C] font-semibold' : 'text-[#231F20]/70 hover:text-[#EA580C] font-medium'} text-[14px] transition-colors duration-200">Programs</a>
                 <a href="${base}gallery.html" class="${isGallery ? 'text-[#EA580C] font-semibold' : 'text-[#231F20]/70 hover:text-[#EA580C] font-medium'} text-[14px] transition-colors duration-200">Gallery</a>
                 <a href="${base}blog.html" class="${isBlogs ? 'text-[#EA580C] font-semibold' : 'text-[#231F20]/70 hover:text-[#EA580C] font-medium'} text-[14px] transition-colors duration-200">Blogs</a>
+                <a href="${base}enquiry.html" class="${isEnquiry ? 'text-[#EA580C] font-semibold' : 'text-[#231F20]/70 hover:text-[#EA580C] font-medium'} text-[14px] transition-colors duration-200">Enquiry</a>
+                
+                <!-- Login Dropdown -->
+                <div class="relative group py-2">
+                    <button class="flex items-center gap-1.5 text-[#231F20]/70 hover:text-[#EA580C] font-medium text-[14px] transition-colors duration-200 group-hover:text-[#EA580C]">
+                        Login
+                        <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.15)] border border-black/5 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <a href="${base}parents-login.html" class="flex items-center px-4 py-2.5 text-[13px] font-semibold text-[#231F20]/80 hover:bg-gray-50 hover:text-[#EA580C] transition-colors">Parents Login</a>
+                        <a href="${base}staff-login.html" class="flex items-center px-4 py-2.5 text-[13px] font-semibold text-[#231F20]/80 hover:bg-gray-50 hover:text-[#EA580C] transition-colors">Staff Login</a>
+                    </div>
+                </div>
             </div>
 
             <!-- Right Side -->
             <div class="flex items-center gap-4 shrink-0">
-                <div class="hidden lg:flex items-center gap-2.5">
-                    <a href="${base}enquiry.html" class="bg-[#111] hover:bg-[#222] text-white font-bold text-[13px] px-5 py-2.5 rounded-full transition-all duration-300 shadow-sm whitespace-nowrap">Enquiry</a>
-                    <a href="${base}parents-login.html" class="bg-[#111] hover:bg-[#222] text-white font-bold text-[13px] px-5 py-2.5 rounded-full transition-all duration-300 shadow-sm whitespace-nowrap">Parents Login</a>
-                    <a href="${base}staff-login.html" class="bg-[#111] hover:bg-[#222] text-white font-bold text-[13px] px-5 py-2.5 rounded-full transition-all duration-300 shadow-sm whitespace-nowrap">Staff Login</a>
-                </div>
                 <a href="${base}contact.html" class="hidden md:flex bg-[#EA580C] hover:bg-[#D94E05] text-white font-bold text-[13px] px-6 py-2.5 rounded-full transition-all duration-300 shadow-md whitespace-nowrap">Contact Us</a>
                 
                 <!-- Hamburger Button -->
-                <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2 focus:outline-none z-[70]">
+                <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2 focus:outline-none z-[120] relative">
                     <span class="w-6 h-0.5 bg-black transition-all duration-300 origin-center" id="bar1"></span>
                     <span class="w-6 h-0.5 bg-black transition-all duration-300" id="bar2"></span>
                     <span class="w-6 h-0.5 bg-black transition-all duration-300 origin-center" id="bar3"></span>
@@ -64,8 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
     </header>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] opacity-0 pointer-events-none transition-opacity duration-300">
-        <div id="mobile-menu-content" class="absolute right-0 top-0 h-full w-[80%] max-w-[400px] bg-white shadow-2xl flex flex-col p-8 translate-x-full transition-transform duration-300 ease-in-out">
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[110] opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="mobile-menu-content" class="absolute right-0 top-0 h-full w-[85%] max-w-[400px] bg-white shadow-2xl flex flex-col p-8 pt-12 translate-x-full transition-transform duration-300 ease-in-out">
             <!-- Header inside menu -->
             <div class="flex justify-between items-center mb-10">
                 <img src="${base}logo/birla-logo-new.png" alt="Logo" class="h-10 w-auto">
@@ -74,21 +84,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 </button>
             </div>
 
-            <!-- Navigation Links -->
-            <nav class="flex flex-col gap-6 mb-12">
-                <a href="${base}index.html" class="${isHome ? 'text-[#EA580C]' : 'text-[#231F20]/80'} text-[20px] font-bold">Home</a>
-                <a href="${base}about.html" class="${isAbout ? 'text-[#EA580C]' : 'text-[#231F20]/80'} text-[20px] font-bold">About Us</a>
-                <a href="${base}programs.html" class="${isPrograms ? 'text-[#EA580C]' : 'text-[#231F20]/80'} text-[20px] font-bold">Programs</a>
-                <a href="${base}gallery.html" class="${isGallery ? 'text-[#EA580C]' : 'text-[#231F20]/80'} text-[20px] font-bold">Gallery</a>
-                <a href="${base}blog.html" class="${isBlogs ? 'text-[#EA580C]' : 'text-[#231F20]/80'} text-[20px] font-bold">Blogs</a>
-                <a href="${base}contact.html" class="text-[#231F20]/80 text-[20px] font-bold">Contact Us</a>
+            <!-- Navigation Links (Mobile) -->
+            <nav class="flex flex-col gap-5 overflow-y-auto pb-10">
+                <a href="${base}index.html" class="${isHome ? 'text-[#EA580C]' : 'text-[#231F20]/80'} text-[18px] font-bold py-1">Home</a>
+                <a href="${base}about.html" class="${isAbout ? 'text-[#EA580C]' : 'text-[#231F20]/80'} text-[18px] font-bold py-1">About Us</a>
+                <a href="${base}programs.html" class="${isPrograms ? 'text-[#EA580C]' : 'text-[#231F20]/80'} text-[18px] font-bold py-1">Programs</a>
+                <a href="${base}gallery.html" class="${isGallery ? 'text-[#EA580C]' : 'text-[#231F20]/80'} text-[18px] font-bold py-1">Gallery</a>
+                <a href="${base}blog.html" class="${isBlogs ? 'text-[#EA580C]' : 'text-[#231F20]/80'} text-[18px] font-bold py-1">Blogs</a>
+                <a href="${base}enquiry.html" class="${isEnquiry ? 'text-[#EA580C]' : 'text-[#231F20]/80'} text-[18px] font-bold py-1">Enquiry</a>
+                
+                <!-- Login Accordion (Mobile) -->
+                <div class="flex flex-col">
+                    <button id="mobile-login-trigger" class="flex items-center justify-between text-[#231F20]/80 text-[18px] font-bold py-1 group">
+                        Login
+                        <svg class="w-5 h-5 transition-transform duration-200" id="mobile-login-arrow" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="mobile-login-content" class="hidden flex-col gap-4 pl-4 mt-4 mb-2 border-l-2 border-[#EA580C]/20">
+                        <a href="${base}parents-login.html" class="text-[#231F20]/70 text-[16px] font-semibold">Parents Login</a>
+                        <a href="${base}staff-login.html" class="text-[#231F20]/70 text-[16px] font-semibold">Staff Login</a>
+                    </div>
+                </div>
+
+                <a href="${base}contact.html" class="text-[#231F20]/80 text-[18px] font-bold py-1">Contact Us</a>
             </nav>
 
-            <!-- Action Buttons -->
-            <div class="flex flex-col gap-4 mt-auto">
-                <a href="${base}enquiry.html" class="w-full bg-[#111] text-white text-center font-bold py-4 rounded-full shadow-md">Admission Enquiry</a>
-                <a href="${base}parents-login.html" class="w-full bg-[#111] text-white text-center font-bold py-4 rounded-full shadow-md">Parents Login</a>
-                <a href="${base}staff-login.html" class="w-full bg-[#111] text-white text-center font-bold py-4 rounded-full shadow-md">Staff Login</a>
+            <!-- Bottom Note -->
+            <div class="mt-auto pt-6 border-t border-gray-100">
+                <p class="text-[12px] text-[#231F20]/40 font-medium tracking-wide uppercase">Admission Open for 2024-25</p>
             </div>
         </div>
     </div>
@@ -106,6 +128,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const bar1 = document.getElementById('bar1');
     const bar2 = document.getElementById('bar2');
     const bar3 = document.getElementById('bar3');
+
+    // Mobile Login Accordion Logic
+    const loginTrigger = document.getElementById('mobile-login-trigger');
+    const loginContent = document.getElementById('mobile-login-content');
+    const loginArrow = document.getElementById('mobile-login-arrow');
+
+    if (loginTrigger) {
+        loginTrigger.addEventListener('click', () => {
+            const isHidden = loginContent.classList.contains('hidden');
+            if (isHidden) {
+                loginContent.classList.remove('hidden');
+                loginContent.classList.add('flex');
+                loginArrow.style.transform = 'rotate(180deg)';
+            } else {
+                loginContent.classList.add('hidden');
+                loginContent.classList.remove('flex');
+                loginArrow.style.transform = '';
+            }
+        });
+    }
 
     function openMenu() {
         overlay.classList.remove('pointer-events-none', 'opacity-0');

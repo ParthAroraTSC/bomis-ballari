@@ -201,101 +201,70 @@
   </section>
 
   <!-- 5. OUR FACILITIES SECTION -->
-  <section class="py-20 md:py-24 px-4 md:px-8 bg-[#f7f5f2] overflow-hidden">
+  <section class="py-20 px-4 md:px-8 bg-[#f7f5f2]">
     <div class="max-w-[1240px] mx-auto">
-      <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-        <!-- Left Content -->
-        <div class="lg:w-2/5 scroll-reveal">
-          <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#e25d2a]/10 text-[#e25d2a] rounded-full text-[11px] font-bold uppercase tracking-wider mb-5">
-            Campus Tour
-          </div>
-          <h2 class="text-[32px] md:text-[48px] font-extrabold text-[#1a1a1a] leading-tight mb-6">
-            Our <span class="text-[#e25d2a]">Facilities</span>
-          </h2>
-          <p class="text-[#666] text-[16px] md:text-[18px] mb-10 leading-relaxed max-w-[500px]">
-            A modern, resource-rich environment designed to inspire curiosity and support the holistic development of every student.
-          </p>
-          
-          <!-- Features Grid -->
-          <div class="grid grid-cols-2 gap-4 md:gap-6">
-            <div class="flex flex-col gap-3 p-5 bg-white rounded-2xl shadow-sm border border-black/[0.03]">
-              <div class="w-9 h-9 bg-[#e25d2a]/5 rounded-xl flex items-center justify-center text-[#e25d2a]">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              </div>
-              <span class="font-bold text-[14px]">Smart Class</span>
-            </div>
-            <div class="flex flex-col gap-3 p-5 bg-white rounded-2xl shadow-sm border border-black/[0.03]">
-              <div class="w-9 h-9 bg-[#e25d2a]/5 rounded-xl flex items-center justify-center text-[#e25d2a]">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-              </div>
-              <span class="font-bold text-[14px]">Sports Hub</span>
-            </div>
-            <div class="flex flex-col gap-3 p-5 bg-white rounded-2xl shadow-sm border border-black/[0.03]">
-              <div class="w-9 h-9 bg-[#e25d2a]/5 rounded-xl flex items-center justify-center text-[#e25d2a]">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              </div>
-              <span class="font-bold text-[14px]">AC Transport</span>
-            </div>
-            <div class="flex flex-col gap-3 p-5 bg-white rounded-2xl shadow-sm border border-black/[0.03]">
-              <div class="w-9 h-9 bg-[#e25d2a]/5 rounded-xl flex items-center justify-center text-[#e25d2a]">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              </div>
-              <span class="font-bold text-[14px]">Arts & Music</span>
+      <!-- Section Header -->
+      <div class="mb-12 text-center md:text-left">
+        <h2 class="text-[32px] md:text-[48px] font-extrabold text-[#1a1a1a] mb-3 uppercase tracking-tight">
+          Our <span class="text-[#e25d2a]">Facilities</span>
+        </h2>
+        <p class="text-[#666] text-[16px] md:text-[18px]">Explore the world-class facilities we provide for our students</p>
+      </div>
+
+      <!-- Facilities Display (Swipe on Mobile, Grid on Desktop) -->
+      <div class="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pb-8 md:pb-0 no-scrollbar snap-x snap-mandatory px-4 md:px-0">
+        <!-- Facility Card 1 -->
+        <div class="min-w-[85%] md:min-w-0 snap-start shrink-0 group">
+          <div class="relative h-[220px] rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-white">
+            <img src="home%20contant/images/f5.jpg" alt="Transport" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+            <!-- Subtle Bottom Overlay -->
+            <div class="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-5">
+              <h3 class="text-white font-bold text-[18px] mb-0.5">Transport</h3>
+              <p class="text-white/80 text-[12px] leading-tight font-medium">Safe and reliable school transport.</p>
             </div>
           </div>
         </div>
 
-        <!-- Right Carousel -->
-        <div class="lg:w-3/5 w-full scroll-reveal">
-          <div class="relative rounded-[32px] overflow-hidden shadow-xl aspect-[16/11] md:aspect-[16/10] bg-white group">
-            <!-- Slider Images -->
-            <div id="facilities-slider" class="flex transition-transform duration-700 ease-in-out h-full">
-              <div class="w-full h-full shrink-0"><img src="home%20contant/images/f5.jpg" alt="Transport" class="w-full h-full object-cover"></div>
-              <div class="w-full h-full shrink-0"><img src="home%20contant/images/f2.jpg" alt="Classroom" class="w-full h-full object-cover"></div>
-              <div class="w-full h-full shrink-0"><img src="home%20contant/images/f3.jpg" alt="Activity" class="w-full h-full object-cover"></div>
-              <div class="w-full h-full shrink-0"><img src="home%20contant/images/f4.jpg" alt="Campus" class="w-full h-full object-cover"></div>
+        <!-- Facility Card 2 -->
+        <div class="min-w-[85%] md:min-w-0 snap-start shrink-0 group">
+          <div class="relative h-[220px] rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-white">
+            <img src="home%20contant/images/f2.jpg" alt="Classrooms" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-5">
+              <h3 class="text-white font-bold text-[18px] mb-0.5">Classrooms</h3>
+              <p class="text-white/80 text-[12px] leading-tight font-medium">Smart and interactive learning spaces.</p>
             </div>
-            
-            <!-- Minimal Navigation Overlay -->
-            <div class="absolute bottom-5 inset-x-5 flex items-center justify-between z-30">
-              <!-- Slide Indicator -->
-              <div class="bg-black/40 backdrop-blur-md text-white px-3 py-1 rounded-full text-[11px] font-bold border border-white/5">
-                <span id="slider-current">1</span> / 4
-              </div>
+          </div>
+        </div>
 
-              <!-- Next Facility Card -->
-              <button onclick="moveSlider(1)" class="bg-white text-[#1a1a1a] p-3 pl-5 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between gap-6 transition-all active:scale-95 group">
-                <span class="text-[13px] font-semibold whitespace-nowrap">Next Facility</span>
-                <div class="w-9 h-9 rounded-[10px] bg-black text-white flex items-center justify-center shrink-0 group-hover:translate-x-0.5 transition-transform">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
-                </div>
-              </button>
+        <!-- Facility Card 3 -->
+        <div class="min-w-[85%] md:min-w-0 snap-start shrink-0 group">
+          <div class="relative h-[220px] rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-white">
+            <img src="home%20contant/images/f3.jpg" alt="Playground" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-5">
+              <h3 class="text-white font-bold text-[18px] mb-0.5">Playground</h3>
+              <p class="text-white/80 text-[12px] leading-tight font-medium">Spacious outdoor area for sports.</p>
             </div>
+          </div>
+        </div>
 
-            <!-- Progress Bar -->
-            <div class="absolute bottom-0 left-0 h-1 bg-white/20 w-full z-20">
-              <div id="slider-progress" class="h-full bg-[#e25d2a] transition-all duration-700" style="width: 25%"></div>
+        <!-- Facility Card 4 -->
+        <div class="min-w-[85%] md:min-w-0 snap-start shrink-0 group">
+          <div class="relative h-[220px] rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-white">
+            <img src="home%20contant/images/f4.jpg" alt="Labs" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-5">
+              <h3 class="text-white font-bold text-[18px] mb-0.5">Modern Labs</h3>
+              <p class="text-white/80 text-[12px] leading-tight font-medium">State-of-the-art labs.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <script>
-      let currentSlide = 0;
-      const totalSlides = 4;
-      const slider = document.getElementById('facilities-slider');
-      const currentText = document.getElementById('slider-current');
-      const progressBar = document.getElementById('slider-progress');
-
-      function moveSlider(direction) {
-        currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-        currentText.textContent = currentSlide + 1;
-        progressBar.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
-      }
-    </script>
   </section>
+
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
 
   <!-- 6. GALLERY / EXPERIENCE SECTION -->
   <section class="py-24 bg-white overflow-hidden">
@@ -416,6 +385,74 @@
         });
       }, { threshold: 0.1 });
       document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+    });
+  </script>
+  <!-- Global Scripts -->
+  <script src="header.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const path = window.location.pathname;
+      const isSubPage = path.includes('/blogs/') || path.includes('/programs/');
+      const base = isSubPage ? '../' : '';
+
+      const popupHTML = `
+      <div id="new-enquiry-popup" class="fixed inset-0 z-[300] flex items-center justify-center p-4 opacity-0 invisible transition-all duration-500 scale-95 pointer-events-none">
+          <div id="new-popup-overlay" class="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
+          <div class="relative bg-white w-full max-w-[420px] rounded-[32px] shadow-2xl overflow-hidden z-10 flex flex-col items-center">
+              <div class="w-full aspect-[21/9] md:aspect-[16/9] relative overflow-hidden">
+                  <img src="${base}home%20contant/images/f2.jpg" alt="Admission" class="w-full h-full object-cover">
+                  <button id="new-close-popup" class="absolute top-4 right-4 w-9 h-9 bg-[#EA580C] text-white rounded-full flex items-center justify-center shadow-lg transition-all focus:outline-none z-30 border border-white/20 active:scale-95">
+                      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+                  </button>
+              </div>
+              <div class="px-6 md:px-8 py-6 md:py-8 w-full text-center">
+                  <h2 class="text-[22px] md:text-[28px] font-extrabold text-[#1a1a1a] mb-1.5 leading-tight text-orange-600 uppercase">BOMIS Admission 2026</h2>
+                  <p class="text-[#666] text-[13px] md:text-[14px] mb-6 md:mb-8 font-medium px-2">Enquire now and our team will assist you with the admission process for 2026-27.</p>
+                  <form id="new-popup-form" class="w-full flex flex-col gap-4 md:gap-5 text-left">
+                      <div>
+                          <label class="block text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1.5 ml-1">Student / Parent Name</label>
+                          <input type="text" required placeholder="Enter full name" class="w-full px-4 py-3.5 bg-gray-50 border border-transparent rounded-2xl focus:outline-none focus:border-[#EA580C]/30 focus:bg-white transition-all text-[13px] font-semibold text-black placeholder:text-gray-400">
+                      </div>
+                      <div>
+                          <label class="block text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1.5 ml-1">Phone Number</label>
+                          <input type="tel" required placeholder="Enter 10-digit number" class="w-full px-4 py-3.5 bg-gray-50 border border-transparent rounded-2xl focus:outline-none focus:border-[#EA580C]/30 focus:bg-white transition-all text-[13px] font-semibold text-black placeholder:text-gray-400">
+                      </div>
+                      <div>
+                          <label class="block text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1.5 ml-1">Email Address (Optional)</label>
+                          <input type="email" placeholder="Enter your email" class="w-full px-4 py-3.5 bg-gray-50 border border-transparent rounded-2xl focus:outline-none focus:border-[#EA580C]/30 focus:bg-white transition-all text-[13px] font-semibold text-black placeholder:text-gray-400">
+                      </div>
+                      <button type="submit" class="w-full bg-[#EA580C] hover:bg-[#D94E05] text-white font-bold py-3.5 rounded-2xl shadow-xl shadow-orange-500/20 transition-all mt-2 active:scale-95 text-[14px]">
+                          Submit Enquiry
+                      </button>
+                  </form>
+              </div>
+          </div>
+      </div>
+      `;
+
+      document.body.insertAdjacentHTML('beforeend', popupHTML);
+
+      const popup = document.getElementById('new-enquiry-popup');
+      const overlay = document.getElementById('new-popup-overlay');
+      const closeBtn = document.getElementById('new-close-popup');
+      const form = document.getElementById('new-popup-form');
+
+      const openP = () => {
+        popup.classList.remove('invisible', 'opacity-0', 'scale-95', 'pointer-events-none');
+        popup.classList.add('opacity-100', 'scale-100');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeP = () => {
+        popup.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+        popup.classList.remove('opacity-100', 'scale-100');
+        document.body.style.overflow = '';
+        setTimeout(() => popup.classList.add('invisible'), 500);
+      };
+
+      setTimeout(openP, 2000);
+      closeBtn.onclick = closeP;
+      overlay.onclick = closeP;
     });
   </script>
 </body>
