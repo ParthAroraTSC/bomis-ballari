@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isEnquiry = path.includes('enquiry.html');
     const isParentsLogin = path.includes('parents-login.html');
     const isStaffLogin = path.includes('staff-login.html');
+    const isTestimonials = path.includes('testimonials.html');
 
     const headerHTML = `
     <!-- Main Navigation Header -->
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <a href="${base}about.html" class="${isAbout ? 'text-[#EA580C] font-semibold' : 'text-[#231F20]/70 hover:text-[#EA580C] font-medium'} text-[14px] transition-colors duration-200">About Us</a>
                 <a href="${base}programs.html" class="${isPrograms ? 'text-[#EA580C] font-semibold' : 'text-[#231F20]/70 hover:text-[#EA580C] font-medium'} text-[14px] transition-colors duration-200">Programs</a>
                 <a href="${base}gallery.html" class="${isGallery ? 'text-[#EA580C] font-semibold' : 'text-[#231F20]/70 hover:text-[#EA580C] font-medium'} text-[14px] transition-colors duration-200">Gallery</a>
+                <a href="${base}testimonials.html" class="${isTestimonials ? 'text-[#EA580C] font-semibold' : 'text-[#231F20]/70 hover:text-[#EA580C] font-medium'} text-[14px] transition-colors duration-200">Testimonials</a>
                 <a href="${base}blog.html" class="${isBlogs ? 'text-[#EA580C] font-semibold' : 'text-[#231F20]/70 hover:text-[#EA580C] font-medium'} text-[14px] transition-colors duration-200">Blogs</a>
                 <a href="${base}enquiry.html" class="${isEnquiry ? 'text-[#EA580C] font-semibold' : 'text-[#231F20]/70 hover:text-[#EA580C] font-medium'} text-[14px] transition-colors duration-200">Enquiry</a>
                 
@@ -80,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <a href="${base}about.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isAbout ? 'text-[#EA580C] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">About Us</a>
                 <a href="${base}programs.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isPrograms ? 'text-[#EA580C] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Programs</a>
                 <a href="${base}gallery.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isGallery ? 'text-[#EA580C] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Gallery</a>
+                <a href="${base}testimonials.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isTestimonials ? 'text-[#EA580C] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Testimonials</a>
                 <a href="${base}blog.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isBlogs ? 'text-[#EA580C] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Blogs</a>
                 <a href="${base}contact.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 text-[#231F20] font-semibold text-[17px]">Contact Us</a>
                 <a href="${base}enquiry.html" class="flex items-center justify-between py-3.5 border-b border-gray-50 ${isEnquiry ? 'text-[#EA580C] font-bold' : 'text-[#231F20] font-semibold'} text-[17px]">Enquiry</a>
