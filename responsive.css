@@ -138,6 +138,92 @@ html, body {
         padding-bottom: 40px !important;
         text-align: center !important;
     }
+/* 5. Portal Login Pages (Parents & Staff) Fixes */
+@media (max-width: 768px) {
+    /* Remove body lock to allow scrolling through the form */
+    body.overflow-hidden {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Force the side-by-side to stack */
+    .flex.flex-col.md\:flex-row.min-h-screen {
+        flex-direction: column !important;
+        min-height: auto !important;
+    }
+
+    /* Show the illustration section (previously hidden on mobile) */
+    .hidden.md\:flex.md\:w-3\/5 {
+        display: flex !important;
+        width: 100% !important;
+        padding: 40px 20px !important;
+        min-height: auto !important;
+        background: linear-gradient(135deg, #fffcf8 0%, #ffe8d1 100%) !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    /* Adjust illustration side padding and alignment */
+    .hidden.md\:flex.md\:w-3\/5 .relative.z-10 {
+        max-width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .hidden.md\:flex.md\:w-3\/5 h1 {
+        font-size: 28px !important;
+    }
+
+    .hidden.md\:flex.md\:w-3\/5 p {
+        font-size: 16px !important;
+    }
+
+    .hidden.md\:flex.md\:w-3\/5 .max-w-lg {
+        max-width: 240px !important;
+        margin-top: 20px !important;
+    }
+
+    /* Form Section Adjustments */
+    .w-full.md\:w-2\/5.bg-white {
+        width: 100% !important;
+        padding: 40px 20px !important;
+        position: static !important;
+        min-height: auto !important;
+    }
+
+    /* Remove absolute logo if needed or center it */
+    .md\:hidden.absolute.top-8.left-6 {
+        display: none !important; /* Hide redundant mobile logo since top section now shows it */
+    }
+
+    /* Login card centering */
+    .w-full.max-w-md.mx-auto.py-12 {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Fix background blobs overlapping inputs */
+    .blob-shape {
+        display: none !important;
+    }
+
+    /* Form elements full width */
+    input, button {
+        width: 100% !important;
+    }
+}
+
+/* 6. Tablet Fixes for Login */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .md\:w-3\/5 {
+        width: 50% !important;
+    }
+    .md\:w-2\/5 {
+        width: 50% !important;
+        padding: 40px !important;
+    }
+}
 
     footer .grid {
         grid-template-columns: 1fr !important;
