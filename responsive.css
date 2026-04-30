@@ -83,11 +83,25 @@ html, body {
         padding-top: 100px !important; /* Adjust for absolute header */
     }
 
-    /* Hero Image */
-    .aspect-\[5\/4\], .aspect-square {
+    /* Hero & Container Image Fixes */
+    .aspect-\[5\/4\], .aspect-square, .aspect-\[4\/3\] {
         aspect-ratio: auto !important;
-        height: 300px !important;
+        height: auto !important;
+        min-height: auto !important;
     }
+
+    .aspect-\[5\/4\] img, .aspect-square img, .aspect-\[4\/3\] img {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important; /* Ensure full image is visible */
+    }
+
+    /* Remove excessive empty space in containers */
+    .overflow-hidden.shadow-2xl, .rounded-\[40px\], .rounded-\[48px\] {
+        height: auto !important;
+    }
+
 
     /* Flex conversion to Vertical Stacks */
     .flex:not(.flex-row) {
