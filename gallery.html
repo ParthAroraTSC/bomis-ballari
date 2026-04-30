@@ -64,10 +64,13 @@
     .gallery-item:hover .gallery-overlay {
       opacity: 1;
     }
-    .gallery-item img {
+    .gallery-item img, .gallery-item video {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
       transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     }
-    .gallery-item:hover img {
+    .gallery-item:hover img, .gallery-item:hover video {
       transform: scale(1.05);
     }
   </style>
@@ -118,17 +121,295 @@
       </p>
     </div>
 
-    <!-- Gallery Placeholder -->
-    <div class="max-w-[1200px] mx-auto px-6 py-20 flex flex-col items-center justify-center scroll-section">
-      <div class="w-24 h-24 bg-[#EA580C]/5 rounded-full flex items-center justify-center mb-8 animate-float">
-        <svg class="w-10 h-10 text-[#EA580C]/40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-        </svg>
+    <!-- Gallery Grid -->
+    <div class="w-full max-w-[1400px] mx-auto px-4 md:px-6 py-8 md:py-12 overflow-hidden">
+      <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6" id="gallery-container">
+        <!-- Gallery items optimized for performance -->
+             
+        <!-- Image DSC_7334.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7334.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7335.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7335.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7336.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7336.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7337.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7337.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7339.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7339.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7340.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7340.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7341.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7341.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7342.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7342.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7343.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7343.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7344.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7344.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7345.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7345.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7346.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7346.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7347.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7347.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7348.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7348.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7349.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7349.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Video DSC_7350.MP4 -->
+        <div class="gallery-item aspect-square bg-black overflow-hidden group">
+          <video class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()">
+            <source src="images%26videos/DSC_7350.MP4" type="video/mp4">
+          </video>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Video DSC_7351.MP4 -->
+        <div class="gallery-item aspect-square bg-black overflow-hidden group">
+          <video class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()">
+            <source src="images%26videos/DSC_7351.MP4" type="video/mp4">
+          </video>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Image DSC_7353.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7353.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7354.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7354.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7355.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7355.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7356.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7356.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7357.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7357.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7358.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7358.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7359.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7359.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Video DSC_7361.MP4 -->
+        <div class="gallery-item aspect-square bg-black overflow-hidden group">
+          <video class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()">
+            <source src="images%26videos/DSC_7361.MP4" type="video/mp4">
+          </video>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Image DSC_7362.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7362.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7363.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7363.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7364.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7364.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7365.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7365.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7366.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7366.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7367.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7367.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Image DSC_7368.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/DSC_7368.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- Video DSC_7369.MP4 -->
+        <div class="gallery-item aspect-square bg-black overflow-hidden group">
+          <video class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()">
+            <source src="images%26videos/DSC_7369.MP4" type="video/mp4">
+          </video>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Video DSC_7371.MP4 -->
+        <div class="gallery-item aspect-square bg-black overflow-hidden group">
+          <video class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()">
+            <source src="images%26videos/DSC_7371.MP4" type="video/mp4">
+          </video>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Video DSC_7377.MP4 -->
+        <div class="gallery-item aspect-square bg-black overflow-hidden group">
+          <video class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()">
+            <source src="images%26videos/DSC_7377.MP4" type="video/mp4">
+          </video>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Video DSC_7378.MP4 -->
+        <div class="gallery-item aspect-square bg-black overflow-hidden group">
+          <video class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()">
+            <source src="images%26videos/DSC_7378.MP4" type="video/mp4">
+          </video>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Video DSC_7379.MP4 -->
+        <div class="gallery-item aspect-square bg-black overflow-hidden group">
+          <video class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()">
+            <source src="images%26videos/DSC_7379.MP4" type="video/mp4">
+          </video>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Video DSC_7380.MP4 -->
+        <div class="gallery-item aspect-square bg-black overflow-hidden group">
+          <video class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()">
+            <source src="images%26videos/DSC_7380.MP4" type="video/mp4">
+          </video>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Video DSC_7381.MP4 -->
+        <div class="gallery-item aspect-square bg-black overflow-hidden group">
+          <video class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()">
+            <source src="images%26videos/DSC_7381.MP4" type="video/mp4">
+          </video>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Video DSC_7383.MP4 -->
+        <div class="gallery-item aspect-square bg-black overflow-hidden group">
+          <video class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()">
+            <source src="images%26videos/DSC_7383.MP4" type="video/mp4">
+          </video>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Video DSC_7384.MP4 -->
+        <div class="gallery-item aspect-square bg-black overflow-hidden group">
+          <video class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()">
+            <source src="images%26videos/DSC_7384.MP4" type="video/mp4">
+          </video>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Image IMGL7099.JPG -->
+        <div class="gallery-item aspect-square bg-white shadow-md">
+          <img src="images%26videos/IMGL7099.JPG" alt="School Activity" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <div class="gallery-overlay"></div>
+        </div>
+        
       </div>
-      <h2 class="text-[32px] md:text-[40px] font-bold text-[#231F20] mb-4 tracking-tight text-center">No Gallery Available</h2>
-      <p class="text-[#6B7280] text-[16px] md:text-[18px] text-center max-w-[480px] leading-relaxed">
-        We are currently updating our gallery with the latest memories and milestones. Please check back soon!
-      </p>
     </div>
   </main>
 

@@ -59,58 +59,36 @@ html, body {
         line-height: 1.2 !important;
     }
 
-    /* Header */
+    /* Header - Unified Full Width */
     header {
-        padding: 10px !important;
+        padding: 0 !important;
+        top: 0 !important;
     }
     
     nav {
-        border-radius: 20px !important;
-        padding: 10px 16px !important;
+        border-radius: 0 !important;
+        padding: 12px 20px !important;
+        max-width: 100% !important;
+        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
     }
     
     nav img {
-        height: 40px !important;
+        height: 36px !important;
     }
 
-    /* Hide desktop nav links (already handled by tailwind but for safety) */
+    /* Hide desktop nav links */
     .hidden.md\:flex {
         display: none !important;
     }
 
     /* Main Content */
     main {
-        padding-top: 100px !important; /* Adjust for absolute header */
+        padding-top: 100px !important;
     }
 
-    /* Hero & Container Image Fixes */
-    .aspect-\[5\/4\], .aspect-square, .aspect-\[4\/3\] {
-        aspect-ratio: auto !important;
-        height: auto !important;
-        min-height: auto !important;
-    }
+    /* Hero & Container Image Fixes - Removed aggressive overrides that break gallery aspect ratios */
 
-    .aspect-\[5\/4\] img, .aspect-square img, .aspect-\[4\/3\] img {
-        position: relative !important;
-        width: 100% !important;
-        height: auto !important;
-        object-fit: contain !important; /* Ensure full image is visible */
-    }
-
-    /* Remove excessive empty space in containers */
-    .overflow-hidden.shadow-2xl, .rounded-\[40px\], .rounded-\[48px\] {
-        height: auto !important;
-    }
-
-
-    /* Flex conversion to Vertical Stacks */
-    .flex:not(.flex-row) {
-        flex-direction: column !important;
-    }
-    
-    .md\:flex-row {
-        flex-direction: column !important;
-    }
+    /* Removed aggressive flex overrides that were breaking layouts */
 
     .items-center {
         text-align: center !important;
