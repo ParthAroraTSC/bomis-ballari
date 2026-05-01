@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Header inside menu -->
             <div class="flex justify-start items-center mb-10">
                 <img src="${base}logo/birla-logo-new.png" alt="Logo" class="h-10 w-auto">
-                <button id="close-menu-btn" class="absolute top-4 right-4 p-1 text-[#231F20]/60 hover:text-[#EA580C] transition-colors">
+                <button id="close-menu-btn" class="absolute top-4 left-4 p-1 text-[#231F20]/60 hover:text-[#EA580C] transition-colors z-[9999]">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
             </div>
