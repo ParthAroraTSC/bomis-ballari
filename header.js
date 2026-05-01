@@ -93,6 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </div>
     <style>
+        @media (min-width: 1024px) {
+            #mobile-menu-overlay { display: none !important; }
+        }
         .custom-scrollbar::-webkit-scrollbar { width: 4px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #eee; border-radius: 10px; }
