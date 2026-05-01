@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const headerHTML = `
     <!-- Main Navigation Header -->
-    <header class="w-full flex justify-center absolute top-0 lg:top-6 left-0 z-[100] pointer-events-none">
+    <header class="w-full flex justify-center fixed top-0 lg:top-6 left-0 z-[100] pointer-events-none">
         <nav class="w-full lg:max-w-[1240px] bg-white backdrop-blur-md lg:rounded-full px-5 md:px-8 py-3.5 md:py-3 flex items-center justify-between shadow-lg border-b lg:border border-black/5 pointer-events-auto">
             <!-- Logo -->
             <a href="${base}index.html" class="flex items-center cursor-pointer shrink-0">
@@ -156,4 +156,18 @@ document.addEventListener('DOMContentLoaded', () => {
     content.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
+
+    // Header Scroll Effect
+    const nav = placeholder.querySelector('nav');
+    function handleScroll() {
+        if (window.scrollY > 20) {
+            nav.classList.add('shadow-xl', 'border-black/10');
+            nav.classList.remove('shadow-lg', 'border-black/5');
+        } else {
+            nav.classList.add('shadow-lg', 'border-black/5');
+            nav.classList.remove('shadow-xl', 'border-black/10');
+        }
+    }
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
 });
