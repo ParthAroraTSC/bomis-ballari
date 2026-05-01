@@ -12,15 +12,27 @@
   <style>
     body { font-family: 'Inter', sans-serif; }
     .content-area p { margin-bottom: 1.8rem; line-height: 1.85; color: #4B5563; font-size: 1.125rem; }
-    .content-area h2 { font-size: 2rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1.25rem; color: #111827; letter-spacing: -0.02em; }
-    .content-area h3 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #111827; }
-    .content-area blockquote { border-left: 4px solid #EA580C; padding-left: 2rem; font-style: italic; margin: 3rem 0; color: #1F2937; font-size: 1.4rem; font-weight: 500; background: #FFF7ED; padding-top: 1.5rem; padding-bottom: 1.5rem; border-radius: 0 16px 16px 0; }
-    .content-area ul { margin-bottom: 1.8rem; list-style-type: none; padding-left: 0; }
-    .content-area li { margin-bottom: 0.75rem; color: #4B5563; font-size: 1.125rem; position: relative; padding-left: 1.5rem; }
-    .content-area li::before { content: "•"; color: #EA580C; font-weight: bold; position: absolute; left: 0; }
-    .content-area .check-list li::before { content: "✔"; }
+    .content-area h2 { font-size: 2.25rem; font-weight: 800; margin-top: 4rem; margin-bottom: 1.5rem; color: #111827; letter-spacing: -0.02em; line-height: 1.2; }
+    .content-area h3 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1.25rem; color: #111827; }
+    .content-area ul { margin-bottom: 2rem; list-style-type: none; padding-left: 0; }
+    .content-area li { margin-bottom: 1rem; color: #4B5563; font-size: 1.125rem; position: relative; padding-left: 2rem; line-height: 1.6; }
+    .content-area li::before { content: "→"; color: #EA580C; font-weight: bold; position: absolute; left: 0; }
+    .content-area .check-list li::before { content: "✓"; }
+    
+    /* Content Boxes */
+    .info-box { background: #F8FAFC; padding: 2.5rem; border-radius: 32px; border-left: 8px solid #3B82F6; margin: 3rem 0; }
+    .highlight-box { background: #FFF7ED; padding: 2.5rem; border-radius: 32px; border: 1px solid #FED7AA; margin: 3rem 0; }
+    .tip-box { background: #F0FDF4; padding: 2.5rem; border-radius: 32px; border-left: 8px solid #22C55E; margin: 3rem 0; }
+    .quote-box { border-left: 6px solid #EA580C; padding: 2.5rem; font-style: italic; margin: 4rem 0; color: #111827; font-size: 1.65rem; font-weight: 600; background: #FFF7ED; border-radius: 0 32px 32px 0; line-height: 1.4; }
+    
     .scroll-reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
     .scroll-reveal.active { opacity: 1; transform: translateY(0); }
+    
+    .icon-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin: 3rem 0; }
+    @media (min-width: 768px) { .icon-grid { grid-template-columns: repeat(2, 1fr); } }
+    .icon-card { background: white; padding: 2rem; border-radius: 24px; border: 1px solid #E5E7EB; transition: all 0.3s ease; }
+    .icon-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    .icon-card span { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
   </style>
   <link rel="stylesheet" href="../responsive.css">
 </head>
@@ -34,96 +46,151 @@
   <main class="flex-grow pt-40 pb-20">
     <!-- Hero Area -->
     <div class="max-w-[1000px] mx-auto px-6 mb-12 scroll-reveal" id="blog-hero">
-      <div class="flex flex-wrap items-center gap-4 mb-6">
-        <span class="bg-[#EA580C] text-white text-[12px] font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm">Investment</span>
-        <span class="text-gray-500 text-[15px] font-medium">March 25, 2026</span>
-        <span class="text-gray-300">|</span>
-        <span class="text-gray-500 text-[15px] font-medium">By Birla Open Minds Ballari</span>
+      <div class="flex flex-col mb-8">
+        <div class="flex items-center gap-3 text-[#EA580C] font-bold tracking-[0.2em] text-[13px] md:text-[15px] uppercase mb-4">
+          <span>B O M I S B A L L A R I</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+          <span>E D U C A T I O N G U I D E</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-4 text-gray-500 text-[14px] md:text-[16px] font-medium">
+          <span>Published March 2026</span>
+          <span class="text-gray-300">·</span>
+          <span>6 min read</span>
+          <span class="text-gray-300">·</span>
+          <span>Birla Open Minds International School</span>
+        </div>
       </div>
-      <h1 class="text-[40px] md:text-[50px] lg:text-[64px] font-bold text-[#111827] leading-[1.1] mb-10 tracking-tight">Why Choosing a CBSE School in Ballari Is the Smartest Investment for Your Child's Future</h1>
       
-      <div class="w-full aspect-[16/9] md:aspect-[21/9] rounded-[32px] overflow-hidden shadow-2xl mb-16 group">
-        <img src="../assets/blogs/cover_1774434998_eff04923.jpg" alt="CBSE School Ballari" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-      </div>
+      <h1 class="text-[40px] md:text-[56px] lg:text-[72px] font-black text-[#111827] leading-[1.05] mb-12 tracking-tight">Why Choosing a CBSE School in Ballari Is the Smartest Investment for Your Child's Future</h1>
+      
+
     </div>
 
     <!-- Content Area -->
-    <div class="max-w-[800px] mx-auto px-6 content-area scroll-reveal">
-      <p class="font-bold text-[1.25rem] text-[#111827]">A practical guide for parents in Ballari to understand why CBSE education can shape a stronger, future-ready child.</p>
-      
-      <p>Parents in Ballari today have more school choices than ever — but not all choices are equal. If your child’s future matters (and of course it does), understanding what makes a <strong>quality CBSE school different</strong> is the first step.</p>
+    <div class="max-w-[850px] mx-auto px-6 content-area scroll-reveal">
+      <div class="info-box">
+        <p class="text-[20px] leading-relaxed text-gray-700 m-0">Parents in Ballari today have more school choices than ever — but not all choices are equal. If your child's future matters (and of course it does), understanding what makes a quality CBSE school different is the first step.</p>
+      </div>
 
-      <p>Every year, thousands of parents in Ballari search for the right school. With terms like <em>“best school in Ballari”</em> and <em>“CBSE school Ballari admission”</em> trending across Google, one thing is clear: Families are thinking carefully — and rightly so.</p>
+      <p>Every year, thousands of parents in Ballari, Karnataka search for the right school for their children. With terms like <strong>"best school in Ballari"</strong> and <strong>"CBSE school Ballari admission"</strong> trending across Google, it's clear that families are thinking carefully — and rightly so. The school you choose for your child is one of the most consequential decisions you will ever make.</p>
 
-      <blockquote>
-        “The school you choose is one of the most important decisions you will ever make.”
-      </blockquote>
-
-      <p>At <strong>Birla Open Minds International School (BOMIS), Ballari</strong>, we believe education is not just about marks — it is about building <strong>curious, confident, and capable individuals</strong>, from pre-school through middle school.</p>
+      <p>At <strong>Birla Open Minds International School (BOMIS), Ballari</strong>, we believe that education is not just about marks. It is about building curious, confident, and capable human beings — from pre-school all the way through middle school.</p>
 
       <h2>What Makes CBSE the Right Board for Students in Ballari?</h2>
+      
+      <p>The Central Board of Secondary Education (CBSE) is the most widely recognised school board in India. Here is why it matters for families in Ballari and beyond:</p>
 
-      <h3>1. Nationally Recognised Curriculum</h3>
-      <p>Whether your family moves to Bengaluru, Hyderabad, Delhi, or anywhere in India, a CBSE certificate is accepted without friction. For families in Ballari connected to industries like <strong>steel, mining, and infrastructure</strong>, where relocation is common, this portability is invaluable.</p>
+      <div class="highlight-box">
+        <h3>1. Nationally Recognised Curriculum</h3>
+        <p>Whether your family moves to Bengaluru, Hyderabad, Delhi, or anywhere in India, a CBSE certificate is accepted without friction. For families in Ballari connected to industries like steel, mining, and infrastructure — industries that often require relocation — this portability is invaluable.</p>
+      </div>
 
-      <h3>2. Strong Foundation for Competitive Exams</h3>
-      <p>CBSE aligns closely with national-level exams such as JEE (Engineering), NEET (Medical), and UPSC (Civil Services). Starting early builds the <strong>conceptual strength</strong> needed for these crucial exams later in life.</p>
+      <div class="highlight-box">
+        <h3>2. Strong Foundation for Competitive Exams</h3>
+        <p>CBSE aligns closely with national competitive examinations including <strong>JEE (engineering), NEET (medicine), and UPSC</strong>. Starting your child on a CBSE curriculum from pre-school builds the conceptual foundation they will need for these crucial exams a decade later.</p>
+      </div>
 
-      <h3>3. Emphasis on Holistic Development</h3>
-      <p>CBSE goes beyond academics by including sports, arts, and life skills. At <strong>BOMIS Ballari</strong>, this is delivered through dedicated facilities, structured programs, and modern teaching methods.</p>
+      <div class="highlight-box">
+        <h3>3. Emphasis on Holistic Development</h3>
+        <p>CBSE schools are mandated to offer not just academics but co-curricular activities including sports, arts, and life skills. At <strong>BOMIS Ballari</strong>, we take this mandate seriously with dedicated facilities for music, dance, sports, and smart classroom learning.</p>
+      </div>
+
+      <h2>6 Reasons BOMIS Ballari Stands Apart from Other Schools in Ballari</h2>
+      
+      <div class="icon-grid">
+        <div class="icon-card">
+          <span>🖥</span>
+          <h4 class="font-bold text-[18px] mb-2">Smart Classrooms</h4>
+          <p class="text-[14px] text-gray-500 m-0">Digital, interactive learning environments that make every lesson engaging and visual — not just chalk-and-talk.</p>
+        </div>
+        <div class="icon-card">
+          <span>🚌</span>
+          <h4 class="font-bold text-[18px] mb-2">Air-Conditioned Transport</h4>
+          <p class="text-[14px] text-gray-500 m-0">Safe, comfortable, individually-seated AC transport — a rarity in Ballari that ensures every commute is stress-free.</p>
+        </div>
+        <div class="icon-card">
+          <span>🏅</span>
+          <h4 class="font-bold text-[18px] mb-2">Specialised Sports</h4>
+          <p class="text-[14px] text-gray-500 m-0">Structured sports programs that build fitness, discipline, and encourage students to compete at local and national levels.</p>
+        </div>
+        <div class="icon-card">
+          <span>📷</span>
+          <h4 class="font-bold text-[18px] mb-2">Full CCTV Surveillance</h4>
+          <p class="text-[14px] text-gray-500 m-0">Campus-wide monitoring for child safety — parents can trust that their children are protected at every moment.</p>
+        </div>
+        <div class="icon-card">
+          <span>🎵</span>
+          <h4 class="font-bold text-[18px] mb-2">Music & Dance Rooms</h4>
+          <p class="text-[14px] text-gray-500 m-0">Specialised rooms equipped for both classical and western arts, nurturing every child's creative talent.</p>
+        </div>
+        <div class="icon-card">
+          <span>🌳</span>
+          <h4 class="font-bold text-[18px] mb-2">Birla Legacy</h4>
+          <p class="text-[14px] text-gray-500 m-0">Backed by Birla Edutech Limited — a name that has stood for quality education and values in India for generations.</p>
+        </div>
+      </div>
 
       <h2>What Age Is Right to Start at BOMIS Ballari?</h2>
-      <p>One of the most common questions parents ask is: <strong>“When should I enrol my child?”</strong> The answer: <strong>the earlier, the better.</strong></p>
-      <p>Research shows that the first <strong>five years of life are critical</strong> for brain development. Children who attend quality pre-schools develop stronger language skills, better social confidence, and lifelong learning habits.</p>
+      <p>One of the most common questions parents ask is: <strong>"When should I enrol my child?"</strong> The answer is: <strong>the earlier, the better.</strong></p>
+      
+      <div class="tip-box">
+        <p class="m-0">Research consistently shows that the first five years of life are the most critical for brain development. Children who attend quality pre-schools develop stronger language skills, social confidence, and learning habits that stay with them forever.</p>
+      </div>
 
-      <h3>Programmes at BOMIS Ballari</h3>
+      <p>BOMIS Ballari offers programmes for three distinct age groups:</p>
       <ul>
         <li><strong>Pre-School (18 months – 5 years):</strong> Play-based learning, language development, motor skills, social readiness</li>
-        <li><strong>Primary School (6 – 10 years):</strong> Core academics, creative subjects, curiosity building</li>
-        <li><strong>Middle School (10 – 14 years):</strong> Conceptual learning, sports, arts, and character development</li>
+        <li><strong>Primary School (6 – 10 years):</strong> Core academics, creative subjects, building curiosity</li>
+        <li><strong>Middle School (10 – 14 years):</strong> Deeper conceptual learning, sports, arts, and character building</li>
       </ul>
 
-      <blockquote>
-        “Education is not the filling of a pail, but the lighting of a fire.”
+      <blockquote class="quote-box">
+        "Education is not the filling of a pail, but the lighting of a fire. At BOMIS Ballari, we ignite that fire from 18 months onward."
       </blockquote>
 
       <h2>How to Check If a School Is the Right Fit for Your Child</h2>
-      <p>When visiting any school in Ballari — including BOMIS — use this checklist:</p>
+      <p>When visiting any school in Ballari — including BOMIS — here is a practical checklist for parents:</p>
       <ul class="check-list">
-        <li><strong>Classroom Experience:</strong> Are children engaged or passive? Are teachers interactive or just instructing?</li>
-        <li><strong>Facilities:</strong> Is the campus clean, safe, and well-maintained?</li>
-        <li><strong>Teacher Quality:</strong> Are teachers trained, experienced, and stable?</li>
-        <li><strong>Curriculum Alignment:</strong> Does the board match your long-term goals?</li>
-        <li><strong>Safety:</strong> Is CCTV available? Is transport safe and supervised?</li>
+        <li><strong>Visit the classroom:</strong> Are children engaged or passive? Are teachers interacting or just instructing?</li>
+        <li><strong>Check the facilities:</strong> Is the campus clean, safe, and well-maintained?</li>
+        <li><strong>Ask about teacher qualifications:</strong> Are teachers trained, experienced, and stable (low attrition)?</li>
+        <li><strong>Understand the board:</strong> Does the curriculum align with your long-term plans for your child?</li>
+        <li><strong>Safety first:</strong> Is CCTV in place? Is transport safe and supervised?</li>
       </ul>
 
-      <h2>Visit BOMIS Ballari</h2>
-      <p>BOMIS Ballari is located near <strong>Pyramid Center, opposite Sanganakallu Hill, Moka Road</strong> — easily accessible from central Ballari. We warmly invite parents to visit our campus and experience the difference firsthand.</p>
+      <p>BOMIS Ballari is located near <strong>Pyramid Center, opposite Sanganakallu Hill, Moka Road</strong> — easily accessible from central Ballari. We warmly invite all parents to visit our campus and see for themselves what makes us different.</p>
 
-      <h2>Final Word: Ballari’s Children Deserve World-Class Education</h2>
-      <p>Ballari is a city on the rise — economically, culturally, and socially. Its children deserve schools that match that ambition. A <strong>quality CBSE education</strong>, delivered in a nurturing and well-equipped environment, is one of the most powerful investments a parent can make.</p>
+      <h2>Final Word: Ballari's Children Deserve World-Class Education</h2>
+      <p>Ballari is a city on the rise — economically, culturally, and socially. The children of Ballari deserve schools that match their ambition. A quality CBSE education, delivered in a nurturing and well-equipped environment, is the most powerful gift any parent can give.</p>
       
-      <p>At <strong>BOMIS Ballari</strong>, under the guidance of <strong>Birla Edutech Limited</strong>, we are proud to be part of that journey — <strong>one child, one classroom, one bright future at a time.</strong></p>
-    </div>
+      <div class="highlight-box">
+        <p class="m-0">BOMIS Ballari, under the guidance of <strong>Birla Edutech Limited</strong>, is proud to be part of that journey — one child, one classroom, one bright future at a time.</p>
+      </div>
 
-    <!-- CTA Section -->
-    <div class="max-w-[800px] mx-auto px-6 mt-24 scroll-reveal">
-      <div class="bg-white p-10 md:p-16 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.04)] text-center border border-gray-100">
-        <h3 class="text-[28px] md:text-[36px] font-bold text-[#111827] mb-6">Start Your Journey Today</h3>
-        <p class="text-gray-500 text-[18px] mb-10 max-w-[500px] mx-auto">Give your child the gift of a world-class education at Birla Open Minds International School, Ballari.</p>
-        <div class="flex flex-wrap justify-center gap-5">
-          <a href="../blog.html" class="bg-white border-2 border-[#EA580C] text-[#EA580C] font-bold px-10 py-4 rounded-full hover:bg-[#EA580C] hover:text-white transition-all duration-300">Back to Blog</a>
-          <a href="../contact.html" class="bg-[#EA580C] text-white font-bold px-10 py-4 rounded-full hover:bg-[#D94E05] transition-all duration-300 shadow-lg shadow-orange-200">Enrol Now</a>
+      <!-- Gold Gradient CTA -->
+      <div class="bg-gradient-to-br from-[#A8712C] to-[#8B5E26] p-10 md:p-20 rounded-[48px] shadow-2xl text-center relative overflow-hidden mt-20 border border-white/10">
+        <!-- Decorative subtle pattern -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+          <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0 100 Q 50 0, 100 100" stroke="white" stroke-width="0.5" fill="none" />
+          </svg>
+        </div>
+        
+        <h3 class="text-[32px] md:text-[52px] font-bold text-white mb-6 leading-tight tracking-tight">Admissions Are Now Open</h3>
+        <p class="text-white/90 text-[18px] md:text-[22px] mb-12 max-w-[650px] mx-auto leading-relaxed">Visit our campus or enquire online. Seats fill quickly — secure your child's future today.</p>
+        
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="../contact.html" class="bg-white text-[#8B5E26] font-bold px-12 py-5 rounded-2xl hover:bg-gray-50 transition-all duration-300 shadow-xl shadow-black/10 active:scale-95 text-[18px] flex items-center gap-3">
+            Enquire About Admission <span class="text-[22px]">→</span>
+          </a>
         </div>
       </div>
     </div>
   </main>
 
-  <!-- Premium Footer (Same as index/about) -->
-    <!-- Global Footer Placeholder -->
+  <!-- Global Footer Placeholder -->
   <div id="footer-placeholder"></div>
   <script src="../footer.js"></script>
-
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {

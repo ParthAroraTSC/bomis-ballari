@@ -12,14 +12,36 @@
   <style>
     body { font-family: 'Inter', sans-serif; }
     .content-area p { margin-bottom: 1.8rem; line-height: 1.85; color: #4B5563; font-size: 1.125rem; }
-    .content-area h2 { font-size: 2rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1.25rem; color: #111827; letter-spacing: -0.02em; }
-    .content-area h3 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #111827; }
-    .content-area blockquote { border-left: 4px solid #EA580C; padding-left: 2rem; font-style: italic; margin: 3rem 0; color: #1F2937; font-size: 1.4rem; font-weight: 500; background: #FFF7ED; padding-top: 1.5rem; padding-bottom: 1.5rem; border-radius: 0 16px 16px 0; }
-    .content-area ul { margin-bottom: 1.8rem; list-style-type: none; padding-left: 0; }
-    .content-area li { margin-bottom: 0.75rem; color: #4B5563; font-size: 1.125rem; position: relative; padding-left: 1.5rem; }
-    .content-area li::before { content: "•"; color: #EA580C; font-weight: bold; position: absolute; left: 0; }
+    .content-area h2 { font-size: 2.25rem; font-weight: 800; margin-top: 4rem; margin-bottom: 1.5rem; color: #111827; letter-spacing: -0.02em; line-height: 1.2; }
+    .content-area h3 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1.25rem; color: #111827; }
+    .content-area ul { margin-bottom: 2rem; list-style-type: none; padding-left: 0; }
+    .content-area li { margin-bottom: 1rem; color: #4B5563; font-size: 1.125rem; position: relative; padding-left: 2rem; line-height: 1.6; }
+    .content-area li::before { content: "✓"; color: #EA580C; font-weight: bold; position: absolute; left: 0; }
+    
+    /* Content Boxes */
+    .info-box { background: #F8FAFC; padding: 2.5rem; border-radius: 32px; border-left: 8px solid #3B82F6; margin: 3rem 0; }
+    .highlight-box { background: #FFF7ED; padding: 2.5rem; border-radius: 32px; border: 1px solid #FED7AA; margin: 3rem 0; }
+    .tip-box { background: #F0FDF4; padding: 2.5rem; border-radius: 32px; border-left: 8px solid #22C55E; margin: 3rem 0; }
+    .red-flag-box { background: #FEF2F2; padding: 2.5rem; border-radius: 32px; border: 1px solid #FECACA; margin: 3rem 0; }
+    .red-flag-box li::before { content: "✗"; color: #DC2626; }
+    .quote-box { border-left: 6px solid #EA580C; padding: 2.5rem; font-style: italic; margin: 4rem 0; color: #111827; font-size: 1.65rem; font-weight: 600; background: #FFF7ED; border-radius: 0 32px 32px 0; line-height: 1.4; }
+    
     .scroll-reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
     .scroll-reveal.active { opacity: 1; transform: translateY(0); }
+    
+    .icon-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin: 3rem 0; }
+    @media (min-width: 768px) { .icon-grid { grid-template-columns: repeat(2, 1fr); } }
+    .icon-card { background: white; padding: 2rem; border-radius: 24px; border: 1px solid #E5E7EB; transition: all 0.3s ease; }
+    .icon-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    .icon-card span { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
+
+    /* Comparison Table Style */
+    .compare-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 3rem 0; }
+    @media (min-width: 768px) { .compare-grid { grid-template-columns: 1fr 1fr; } }
+    .compare-card { padding: 2.5rem; border-radius: 32px; }
+    .compare-card.success { background: #F0FDF4; border: 1px solid #BBF7D0; }
+    .compare-card.warning { background: #FEF2F2; border: 1px solid #FECACA; }
+    .compare-card h4 { font-size: 1.25rem; font-weight: 800; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
   </style>
   <link rel="stylesheet" href="../responsive.css">
 </head>
@@ -33,89 +55,167 @@
   <main class="flex-grow pt-40 pb-20">
     <!-- Hero Area -->
     <div class="max-w-[1000px] mx-auto px-6 mb-12 scroll-reveal" id="blog-hero">
-      <div class="flex flex-wrap items-center gap-4 mb-6">
-        <span class="bg-[#EA580C] text-white text-[12px] font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm">Excellence</span>
-        <span class="text-gray-500 text-[15px] font-medium">March 25, 2026</span>
-        <span class="text-gray-300">|</span>
-        <span class="text-gray-500 text-[15px] font-medium">By Birla Open Minds Ballari</span>
+      <div class="flex flex-col mb-8">
+        <div class="flex items-center gap-3 text-[#EA580C] font-bold tracking-[0.2em] text-[13px] md:text-[15px] uppercase mb-4">
+          <span>B O M I S B A L L A R I</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+          <span>S C H O O L I N S I G H T S</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-4 text-gray-500 text-[14px] md:text-[16px] font-medium">
+          <span>Published March 2026</span>
+          <span class="text-gray-300">·</span>
+          <span>6 min read</span>
+          <span class="text-gray-300">·</span>
+          <span>Birla Open Minds International School</span>
+        </div>
       </div>
-      <h1 class="text-[40px] md:text-[50px] lg:text-[64px] font-bold text-[#111827] leading-[1.1] mb-10 tracking-tight">Smart Classrooms, Sports & Safety: How the Best School in Ballari Raises Exceptional Children</h1>
       
-      <div class="w-full aspect-[16/9] md:aspect-[21/9] rounded-[32px] overflow-hidden shadow-2xl mb-16 group">
-        <img src="../assets/blogs/cover_1774435436_ce9769fe.jpg" alt="Smart Classrooms and Sports" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-      </div>
+      <h1 class="text-[40px] md:text-[56px] lg:text-[72px] font-black text-[#111827] leading-[1.05] mb-12 tracking-tight">Smart Classrooms, Sports & Safety: How the Best School in Ballari Raises Exceptional Children</h1>
+      
+
     </div>
 
     <!-- Content Area -->
-    <div class="max-w-[800px] mx-auto px-6 content-area scroll-reveal">
-      <p class="font-bold text-[1.25rem] text-[#111827]">A thoughtful look at what holistic education actually means — and how BOMIS Ballari delivers it through facilities, curriculum, and values that go far beyond textbooks.</p>
-      
-      <p>Ask any parent in Ballari what they want for their child’s school, and you will hear the same three things: <strong>safety, quality teaching, and opportunities beyond academics</strong>.</p>
+    <div class="max-w-[850px] mx-auto px-6 content-area scroll-reveal">
+      <div class="info-box">
+        <p class="text-[20px] leading-relaxed text-gray-700 m-0">Ask any parent in Ballari what they want for their child's school, and you will hear the same three things: <strong>safety, quality teaching, and opportunities beyond academics</strong>. These are not extras. They are the foundation. And they are precisely what separates a good school from a great one.</p>
+      </div>
 
-      <p>These are not extras. They are the foundation. And they are precisely what separates a <strong>good school from a great one</strong>.</p>
-
-      <p>When families search for the <em>“best school in Ballari”</em>, they are rarely just comparing boards or fees. They are asking something deeper: <strong>Will this school help my child become someone remarkable?</strong></p>
+      <p>When families search for the <em>"best school in Ballari"</em>, they are rarely just looking at board affiliations or fee structures. They are asking a deeper question: <strong>Will this school help my child become someone remarkable?</strong></p>
 
       <p>At <strong>Birla Open Minds International School (BOMIS), Ballari</strong>, that question guides every decision — from classroom design to transport safety to the music room at the end of the corridor.</p>
 
-      <blockquote>
-        “A truly great school is not built on a single strength. It is built on multiple pillars, each reinforcing the others.”
-      </blockquote>
-
       <h2>The 6 Pillars of Excellence at BOMIS Ballari</h2>
-      <p>Our commitment to excellence is reflected in our infrastructure, our educators, and our unwavering focus on child safety and development.</p>
+      <p>A truly great school is not built on a single strength. It is built on multiple pillars, each reinforcing the others. Here is how BOMIS Ballari delivers on each one:</p>
 
-      <h2>Why “Holistic Development” Actually Matters</h2>
-      <p>Every school in India claims to offer <em>holistic development</em>. Very few define what that actually means. At its core, holistic development means a child grows in <strong>four key dimensions simultaneously</strong>:</p>
+      <div class="icon-grid">
+        <div class="icon-card">
+          <span>🖥</span>
+          <h4 class="font-bold text-[18px] mb-2">Smart Classrooms</h4>
+          <p class="text-[14px] text-gray-500 m-0">Interactive digital boards replace passive chalk-and-talk. Lessons become visual, dynamic, and memorable — proven to improve retention and engagement across all age groups.</p>
+        </div>
+        <div class="icon-card">
+          <span>🏃</span>
+          <h4 class="font-bold text-[18px] mb-2">Specialised Sports</h4>
+          <p class="text-[14px] text-gray-500 m-0">Structured sports programmes build physical fitness, teamwork, and discipline. Our students have the opportunity to compete at local and national levels.</p>
+        </div>
+        <div class="icon-card">
+          <span>📷</span>
+          <h4 class="font-bold text-[18px] mb-2">Campus-Wide CCTV</h4>
+          <p class="text-[14px] text-gray-500 m-0">Every classroom, corridor, and campus zone is monitored. Parents trust BOMIS with their most precious responsibility — and we take that seriously.</p>
+        </div>
+        <div class="icon-card">
+          <span>🎶</span>
+          <h4 class="font-bold text-[18px] mb-2">Music & Dance Rooms</h4>
+          <p class="text-[14px] text-gray-500 m-0">Dedicated, well-equipped spaces for classical and western music and dance. The arts are central to a child's development at BOMIS.</p>
+        </div>
+        <div class="icon-card">
+          <span>🚌</span>
+          <h4 class="font-bold text-[18px] mb-2">Air-Conditioned Transport</h4>
+          <p class="text-[14px] text-gray-500 m-0">Safe, individually-seated, air-conditioned school buses — a genuine rarity among Ballari schools. Every journey is supervised and comfortable.</p>
+        </div>
+        <div class="icon-card">
+          <span>🏛</span>
+          <h4 class="font-bold text-[18px] mb-2">Birla Edutech Backing</h4>
+          <p class="text-[14px] text-gray-500 m-0">Under the guidance of Birla Edutech Limited — one of India's most trusted education groups — delivering a curriculum and ethos built on decades of excellence.</p>
+        </div>
+      </div>
 
-      <h3>🎓 ACADEMIC – Intellectual Growth</h3>
-      <p>Strong conceptual understanding through CBSE curriculum, smart classroom technology, and trained, engaged teachers — not just syllabus completion, but real learning.</p>
-
-      <h3>🏃 PHYSICAL – Fitness & Discipline</h3>
-      <p>Structured sports programs build resilience, teamwork, discipline, and life skills beyond exams.</p>
-
-      <h3>🎨 CREATIVE – Artistic Expression</h3>
-      <p>Music, dance, and arts enhance brain development, emotional intelligence, and academic performance.</p>
-
-      <h3>🤝 SOCIAL – Emotional Intelligence</h3>
-      <p>A safe, nurturing environment where children learn communication, empathy, and collaboration.</p>
-
-      <h2>Facilities & Features at BOMIS Ballari</h2>
-      <ul>
-        <li><strong>Smart Classrooms:</strong> Equipped with interactive digital boards for immersive learning</li>
-        <li><strong>Specialized Sports Programs:</strong> Dedicated focus on physical development and resilience</li>
-        <li><strong>Campus-wide CCTV Monitoring:</strong> Ensuring a safe and secure environment for every child</li>
-        <li><strong>Music & Dance Rooms:</strong> Creative spaces for artistic growth and expression</li>
-        <li><strong>Air-Conditioned Transport:</strong> Safe, comfortable travel with constant supervision</li>
-        <li><strong>Backed by Birla Edutech Limited:</strong> World-class educational standards and expertise</li>
-      </ul>
-
-      <blockquote>
-        “A school is not just a place for education — it is where a child’s identity begins to take shape.”
+      <blockquote class="quote-box">
+        "A thoughtful look at what holistic education actually means — and how BOMIS Ballari delivers it through facilities, curriculum, and values that go far beyond textbooks."
       </blockquote>
 
-      <h2>Final Thought</h2>
-      <p>At BOMIS Ballari, the goal is not just to create good students, but to nurture <strong>confident, capable, and well-rounded individuals ready for the future</strong>.</p>
-    </div>
+      <h2>Why "Holistic Development" Actually Matters — Not Just as a Buzzword</h2>
+      <p>Every school in India claims to offer "holistic development." Very few define what that actually means. At its core, holistic development means a child grows in <strong>four dimensions simultaneously</strong>:</p>
 
-    <!-- CTA Section -->
-    <div class="max-w-[800px] mx-auto px-6 mt-24 scroll-reveal">
-      <div class="bg-white p-10 md:p-16 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.04)] text-center border border-gray-100">
-        <h3 class="text-[28px] md:text-[36px] font-bold text-[#111827] mb-6">Experience Excellence Firsthand</h3>
-        <p class="text-gray-500 text-[18px] mb-10 max-w-[500px] mx-auto">Visit our campus today and see how we are raising exceptional children in the heart of Ballari.</p>
-        <div class="flex flex-wrap justify-center gap-5">
-          <a href="../blog.html" class="bg-white border-2 border-[#EA580C] text-[#EA580C] font-bold px-10 py-4 rounded-full hover:bg-[#EA580C] hover:text-white transition-all duration-300">Back to Blog</a>
-          <a href="../contact.html" class="bg-[#EA580C] text-white font-bold px-10 py-4 rounded-full hover:bg-[#D94E05] transition-all duration-300 shadow-lg shadow-orange-200">Book a Visit</a>
+      <div class="highlight-box">
+        <h3>🎓 ACADEMIC – Intellectual Growth</h3>
+        <p>Strong conceptual understanding through CBSE curriculum, smart classroom technology, and trained, engaged teachers — not just coverage of the syllabus, but genuine understanding.</p>
+      </div>
+
+      <div class="highlight-box">
+        <h3>🏅 PHYSICAL – Physical Fitness & Discipline</h3>
+        <p>Sport builds more than fitness — it builds resilience, time management, and the ability to win and lose gracefully. These are life skills with exam-proof value.</p>
+      </div>
+
+      <div class="highlight-box">
+        <h3>🎨 CREATIVE – Creative & Artistic Expression</h3>
+        <p>Music, dance, and arts develop neural pathways linked to mathematics, language, and emotional intelligence. Children who learn an instrument outperform peers in multiple academic areas.</p>
+      </div>
+
+      <div class="highlight-box">
+        <h3>❤ SOCIAL – Social & Emotional Intelligence</h3>
+        <p>A safe, nurturing campus where children learn to collaborate, communicate, and develop empathy — the skills that employers and universities rank above grades.</p>
+      </div>
+
+      <h2>What Parents in Ballari Should Compare When Choosing a School</h2>
+      <div class="compare-grid">
+        <div class="compare-card success">
+          <h4 class="text-green-700">✓ WHAT GREAT SCHOOLS OFFER</h4>
+          <ul class="space-y-3">
+            <li>Smart classrooms with interactive learning</li>
+            <li>Dedicated sports coaching, not just a ground</li>
+            <li>Music and arts as core subjects</li>
+            <li>CCTV across all campus areas</li>
+            <li>Safe AC transport with supervision</li>
+            <li>Trained, stable teaching staff</li>
+            <li>Clear, transparent admission process</li>
+            <li>National board affiliation (CBSE)</li>
+          </ul>
+        </div>
+        <div class="compare-card warning">
+          <h4 class="text-red-700">✗ RED FLAGS TO WATCH FOR</h4>
+          <ul class="red-flag-box border-none bg-transparent p-0 m-0">
+            <li>Overcrowded classrooms with passive teaching</li>
+            <li>No outdoor sports or structured PE</li>
+            <li>Arts only as an after-school add-on</li>
+            <li>Limited or no campus security</li>
+            <li>Non-AC or unsupervised transport</li>
+            <li>High teacher turnover year to year</li>
+            <li>Opaque fees or admission pressure</li>
+            <li>Unknown or unaffiliated board</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <p><strong>BOMIS Ballari</strong> is located near <strong>Pyramid Center, opposite Sanganakallu Hill, Moka Road</strong> — a well-connected location served by our own AC transport fleet. Parents across Ballari city can access the school comfortably.</p>
+      </div>
+
+      <h2>The BOMIS Promise: From Pre-School to Middle School, One Consistent Journey</h2>
+      <p>One of the most underrated advantages of BOMIS Ballari is the continuity of education. Children who enrol at 18 months in our Pre-School can continue seamlessly through Primary School (Class 1–5) and Middle School (Class 6–8), without the emotional disruption of changing schools.</p>
+      
+      <p>This continuity is especially powerful because learning is cumulative. Every teacher at BOMIS knows the child's history, strengths, and growth areas. That institutional knowledge cannot be replicated when families switch schools mid-journey.</p>
+
+      <div class="highlight-box">
+        <h3>A School That Grows With Your Child — And With Ballari</h3>
+        <p>Ballari is a city that is growing rapidly — in population, economy, and ambition. Its children deserve schools that match that ambition. A school that brings smart technology, experienced educators, structured sports, creative arts, and genuine safety standards to Ballari's families is not just a school — it is an investment in the city's future.</p>
+      </div>
+
+      <!-- Gold Gradient CTA -->
+      <div class="bg-gradient-to-br from-[#A8712C] to-[#8B5E26] p-10 md:p-20 rounded-[48px] shadow-2xl text-center relative overflow-hidden mt-20 border border-white/10">
+        <!-- Decorative subtle pattern -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+          <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0 100 Q 50 0, 100 100" stroke="white" stroke-width="0.5" fill="none" />
+          </svg>
+        </div>
+        
+        <h3 class="text-[32px] md:text-[52px] font-bold text-white mb-6 leading-tight tracking-tight">Admissions Are Now Open</h3>
+        <p class="text-white/90 text-[18px] md:text-[22px] mb-12 max-w-[650px] mx-auto leading-relaxed">Visit our campus or enquire online. Seats fill quickly — secure your child's future today.</p>
+        
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="../contact.html" class="bg-white text-[#8B5E26] font-bold px-12 py-5 rounded-2xl hover:bg-gray-50 transition-all duration-300 shadow-xl shadow-black/10 active:scale-95 text-[18px] flex items-center gap-3">
+            Enquire About Admission <span class="text-[22px]">→</span>
+          </a>
         </div>
       </div>
     </div>
   </main>
 
-  <!-- Premium Footer (Same as index/about) -->
-    <!-- Global Footer Placeholder -->
+  <!-- Global Footer Placeholder -->
   <div id="footer-placeholder"></div>
   <script src="../footer.js"></script>
-
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {

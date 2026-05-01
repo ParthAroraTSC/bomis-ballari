@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- Column 1: Brand -->
         <div class="flex flex-col gap-6">
           <a href="${base}index.html" class="inline-block">
-            <img src="${base}logo/footer-logo.png" alt="BOMIS Ballari" class="h-28 md:h-36 w-auto">
+            <img src="${base}logo/footer-logo.png" alt="BOMIS Ballari" class="h-28 md:h-36 w-auto" loading="lazy">
           </a>
           <p class="text-[#57534E] text-[15px] leading-relaxed max-w-[320px]">
             Safe, playful early education for children aged 1–6, guided by experienced educators who nurture curiosity.
@@ -97,23 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="flex flex-col sm:flex-row items-center gap-8">
           <!-- Social Icons -->
           <div class="flex items-center gap-4">
-            <a href="#" class="text-[#231F20] hover:opacity-70 transition-opacity duration-200" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <a href="https://www.facebook.com/share/1G9zZF1Zmb/" target="_blank" class="text-[#231F20] hover:opacity-70 transition-opacity duration-200" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
             </a>
-            <a href="#" class="text-[#231F20] hover:opacity-70 transition-opacity duration-200" aria-label="TikTok">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.89-.73-3.99-1.72v6.57a7.135 7.135 0 0 1-2.41 5.39 7.06 7.06 0 0 1-8.93-.5 7.16 7.16 0 0 1-1.97-5.83c.37-2.59 2.06-4.96 4.62-5.68.25-.07.5-.12.76-.16V12.1c-.13.03-.26.07-.38.11a3.16 3.16 0 0 0-2.04 2.32 3.17 3.17 0 0 0 1.6 3.56 3.17 3.17 0 0 0 4.29-1.28c.11-.21.18-.44.23-.67V0h-.02z"></path>
-              </svg>
-            </a>
-            <a href="#" class="text-[#231F20] hover:opacity-70 transition-opacity duration-200" aria-label="X">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                <path d="M18.901 1.153h3.68l-8.04 9.19 9.457 12.504h-7.406l-5.8-7.584-6.638 7.584H.471l8.6-9.83L0 1.153h7.594l5.243 6.932 6.064-6.932zm-1.292 19.494h2.039L6.486 3.24H4.298l13.311 17.407z"></path>
-              </svg>
-            </a>
-            <a href="#" class="text-[#231F20] hover:opacity-70 transition-opacity duration-200" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <a href="https://www.instagram.com/birla.openmindsballari?utm_source=qr&igsh=MW8yNTQ3ZDBsazQydA==" target="_blank" class="text-[#231F20] hover:opacity-70 transition-opacity duration-200" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
