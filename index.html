@@ -398,16 +398,16 @@
       const popupHTML = `
       <div id="new-enquiry-popup" class="fixed inset-0 z-[300] flex items-center justify-center p-4 opacity-0 invisible transition-all duration-500 scale-95 pointer-events-none">
           <div id="new-popup-overlay" class="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
-          <div class="relative bg-white w-full max-w-[420px] rounded-[32px] shadow-2xl z-10 flex flex-col items-center">
-              <div class="w-full rounded-t-[32px] overflow-hidden">
-                  <img src="${base}home%20contant/images/f2.jpg" alt="Admission" class="w-full h-auto object-cover block rounded-t-[32px]">
+          <div class="relative bg-white w-[92%] max-w-[420px] rounded-[32px] shadow-2xl z-10 flex flex-col overflow-hidden">
+              <div class="w-full aspect-video relative overflow-hidden">
+                  <img src="${base}home%20contant/images/f2.jpg" alt="Admission" class="absolute inset-0 w-full h-full object-cover">
+                  <button id="new-close-popup" class="absolute top-5 left-5 p-1 text-white hover:opacity-80 transition-all focus:outline-none z-[9999]">
+                      <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+                  </button>
               </div>
-              <button id="new-close-popup" class="absolute top-4 left-4 p-2 text-white hover:opacity-80 transition-all focus:outline-none z-[9999]">
-                  <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
-              </button>
-              <div class="px-6 md:px-8 py-6 md:py-8 w-full text-center rounded-b-[32px]">
+              <div class="px-6 py-6 w-full text-center">
                   <h2 class="text-[22px] md:text-[28px] font-extrabold text-[#1a1a1a] mb-1.5 leading-tight text-orange-600 uppercase">BOMIS Admission 2026</h2>
-                  <p class="text-[#666] text-[13px] md:text-[14px] mb-6 md:mb-8 font-medium px-2">Enquire now and our team will assist you with the admission process for 2026-27.</p>
+                  <p class="text-[#666] text-[13px] md:text-[14px] mb-6 font-medium px-2">Enquire now and our team will assist you with the admission process for 2026-27.</p>
                   <form id="new-popup-form" class="w-full flex flex-col gap-4 md:gap-5 text-left">
                       <div>
                           <label class="block text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1.5 ml-1">Student / Parent Name</label>
