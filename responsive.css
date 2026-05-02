@@ -110,10 +110,9 @@ html, body {
         padding-right: 16px !important;
     }
 
-    /* Images - Don't override height on object-cover images inside aspect-ratio containers */
-    img:not(.object-cover) {
+    /* Images - only constrain width, don't override height */
+    img {
         max-width: 100% !important;
-        height: auto !important;
     }
 
     /* Buttons Full Width */
