@@ -262,8 +262,8 @@ html, body {
         padding-top: 120px !important;
     }
     
-    /* Ensure no horizontal scroll on very small screens */
-    * {
+    /* Ensure no horizontal scroll on very small screens - scoped to avoid breaking mobile menu */
+    body > section, body > main, body > div:not(#mobile-menu-overlay):not([id="header-placeholder"]) {
         max-width: 100vw !important;
         box-sizing: border-box !important;
     }
