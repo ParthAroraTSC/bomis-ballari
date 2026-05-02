@@ -110,8 +110,8 @@ html, body {
         padding-right: 16px !important;
     }
 
-    /* Images */
-    img {
+    /* Images - Don't override height on object-cover images inside aspect-ratio containers */
+    img:not(.object-cover) {
         max-width: 100% !important;
         height: auto !important;
     }
