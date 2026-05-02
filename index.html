@@ -317,9 +317,6 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Blog 1 -->
         <div class="scroll-reveal bg-white rounded-[32px] overflow-hidden hover-lift group">
-          <div class="aspect-[16/10] overflow-hidden">
-            <img src="assets/blogs/cover_1774435704_c429935d.jpg" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-          </div>
           <div class="p-8">
             <div class="flex gap-2 mb-4">
               <span class="px-3 py-1 bg-[#e25d2a]/10 text-[#e25d2a] text-[12px] font-bold rounded-full">Admissions</span>
@@ -333,9 +330,6 @@
         </div>
         <!-- Blog 2 -->
         <div class="scroll-reveal bg-white rounded-[32px] overflow-hidden hover-lift group" style="transition-delay: 0.1s">
-          <div class="aspect-[16/10] overflow-hidden">
-            <img src="assets/blogs/cover_1774434998_eff04923.jpg" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-          </div>
           <div class="p-8">
             <div class="flex gap-2 mb-4">
               <span class="px-3 py-1 bg-[#e25d2a]/10 text-[#e25d2a] text-[12px] font-bold rounded-full">Parenting</span>
@@ -349,9 +343,6 @@
         </div>
         <!-- Blog 3 -->
         <div class="scroll-reveal bg-white rounded-[32px] overflow-hidden hover-lift group" style="transition-delay: 0.2s">
-          <div class="aspect-[16/10] overflow-hidden">
-            <img src="assets/blogs/cover_1774435436_ce9769fe.jpg" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-          </div>
           <div class="p-8">
             <div class="flex gap-2 mb-4">
               <span class="px-3 py-1 bg-[#e25d2a]/10 text-[#e25d2a] text-[12px] font-bold rounded-full">Development</span>
@@ -383,7 +374,7 @@
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.1 });
+      }, { threshold: 0.05 });
       document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
     });
   </script>

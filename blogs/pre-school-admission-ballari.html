@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +40,9 @@
     .stat-card { background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #E5E7EB; text-align: center; }
     .stat-val { font-size: 3rem; font-weight: 900; color: #EA580C; margin-bottom: 0.5rem; }
     .stat-lab { font-size: 0.875rem; font-weight: 700; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; }
+    .no-js .scroll-reveal { opacity: 1 !important; transform: none !important; }
   </style>
+  <script>document.documentElement.classList.remove('no-js');</script>
   <link rel="stylesheet" href="../responsive.css">
 </head>
 <body class="bg-[#F7F5F2] min-h-screen flex flex-col">
@@ -220,7 +222,7 @@
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.1 });
+      }, { threshold: 0.05 });
       document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
     });
   </script>
